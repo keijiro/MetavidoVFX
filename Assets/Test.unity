@@ -354,7 +354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1075504124
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -367,8 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae25cafffe5954172a9ef9a7b41bab6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _decoder: {fileID: 467884317}
   _demux: {fileID: 467884316}
-  _camera: {fileID: 1556319652}
   _colorMapProperty:
     m_Name: ColorMap
   _depthMapProperty:
@@ -401,7 +401,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075504123}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

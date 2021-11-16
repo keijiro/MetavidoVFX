@@ -9,8 +9,8 @@ namespace Bibcam {
 [VFXBinder("Bibcam")]
 class VFXBibcamBinder : VFXBinderBase
 {
+    [SerializeField] BibcamMetadataDecoder _decoder = null;
     [SerializeField] BibcamTextureDemuxer _demux = null;
-    [SerializeField] Camera _camera = null;
 
     public string ColorMapProperty
       { get => (string)_colorMapProperty;
@@ -41,7 +41,7 @@ class VFXBibcamBinder : VFXBinderBase
     ExposedProperty _inverseViewMatrixProperty = "InverseViewMatrix";
 
     public override bool IsValid(VisualEffect component)
-      => _demux != null && _camera != null &&
+      => _decoder != null && _demux != null &&
          component.HasTexture(_colorMapProperty) &&
          component.HasTexture(_depthMapProperty) &&
          component.HasVector4(_projectionVectorProperty) &&
@@ -49,16 +49,17 @@ class VFXBibcamBinder : VFXBinderBase
 
     public override void UpdateBinding(VisualEffect component)
     {
-        // Do nothing if the demuxer is not ready.
-        if (_demux.ColorTexture == null) return;
+        // Do nothing if metadata is not ready.
+        var meta = _decoder.Metadata;
+        if (!meta.IsValid) return;
 
         // Projection parameters
-        var pm = _camera.projectionMatrix;
+        var pm = meta.ProjectionMatrix;
         var pv = new Vector4(pm[0, 2], pm[1, 2], pm[0, 0], pm[1, 1]);
 
         // Inverse view matrix
-        var v2w = Matrix4x4.TRS(_camera.transform.position,
-                                _camera.transform.rotation,
+        var v2w = Matrix4x4.TRS(meta.CameraPosition,
+                                meta.CameraRotation,
                                 new Vector3(1, 1, -1));
 
         // Property update

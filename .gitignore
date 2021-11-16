@@ -1,0 +1,11 @@
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+
+/Assets/StreamingAssets/*.mp4
+/Library
+/Logs
+/Recordings
+/Temp
+/UserSettings

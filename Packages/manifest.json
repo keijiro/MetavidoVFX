@@ -1,0 +1,14 @@
+{
+  "scopedRegistries": [
+    {
+      "name": "Keijiro",
+      "url": "https://registry.npmjs.com",
+      "scopes": [ "jp.keijiro" ]
+    }
+  ],
+  "dependencies": {
+    "com.unity.render-pipelines.high-definition": "12.1.1",
+    "jp.keijiro.bibcam": "file:../../Bibcam/Packages/jp.keijiro.bibcam",
+    "jp.keijiro.vfxgraphassets": "1.0.8"
+  }
+}

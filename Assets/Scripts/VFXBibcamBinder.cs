@@ -20,13 +20,13 @@ class VFXBibcamBinder : VFXBinderBase
       { get => (string)_depthMapProperty;
         set => _depthMapProperty = value; }
 
-    public string ProjectionVectorProperty
-      { get => (string)_projectionVectorProperty;
-        set => _projectionVectorProperty = value; }
+    public string RayParamsProperty
+      { get => (string)_rayParamsProperty;
+        set => _rayParamsProperty = value; }
 
-    public string InverseViewMatrixProperty
-      { get => (string)_inverseViewMatrixProperty;
-        set => _inverseViewMatrixProperty = value; }
+    public string InverseViewProperty
+      { get => (string)_inverseViewProperty;
+        set => _inverseViewProperty = value; }
 
     [VFXPropertyBinding("UnityEngine.Texture2D"), SerializeField]
     ExposedProperty _colorMapProperty = "ColorMap";
@@ -35,17 +35,17 @@ class VFXBibcamBinder : VFXBinderBase
     ExposedProperty _depthMapProperty = "DepthMap";
 
     [VFXPropertyBinding("UnityEngine.Vector4"), SerializeField]
-    ExposedProperty _projectionVectorProperty = "ProjectionVector";
+    ExposedProperty _rayParamsProperty = "RayParams";
 
     [VFXPropertyBinding("UnityEngine.Matrix4x4"), SerializeField]
-    ExposedProperty _inverseViewMatrixProperty = "InverseViewMatrix";
+    ExposedProperty _inverseViewProperty = "InverseView";
 
     public override bool IsValid(VisualEffect component)
       => _decoder != null && _demux != null &&
          component.HasTexture(_colorMapProperty) &&
          component.HasTexture(_depthMapProperty) &&
-         component.HasVector4(_projectionVectorProperty) &&
-         component.HasMatrix4x4(_inverseViewMatrixProperty);
+         component.HasVector4(_rayParamsProperty) &&
+         component.HasMatrix4x4(_inverseViewProperty);
 
     public override void UpdateBinding(VisualEffect component)
     {
@@ -53,20 +53,15 @@ class VFXBibcamBinder : VFXBinderBase
         var meta = _decoder.Metadata;
         if (!meta.IsValid) return;
 
-        // Projection parameters
-        var pm = meta.ProjectionMatrix;
-        var pv = new Vector4(pm[0, 2], pm[1, 2], pm[0, 0], pm[1, 1]);
-
-        // Inverse view matrix
-        var v2w = Matrix4x4.TRS(meta.CameraPosition,
-                                meta.CameraRotation,
-                                new Vector3(1, 1, -1));
+        // Camera parameters
+        var ray = BibcamRenderUtils.RayParams(meta);
+        var iview = BibcamRenderUtils.InverseView(meta);
 
         // Property update
         component.SetTexture(_colorMapProperty, _demux.ColorTexture);
         component.SetTexture(_depthMapProperty, _demux.DepthTexture);
-        component.SetVector4(_projectionVectorProperty, pv);
-        component.SetMatrix4x4(_inverseViewMatrixProperty, v2w);
+        component.SetVector4(_rayParamsProperty, ray);
+        component.SetMatrix4x4(_inverseViewProperty, iview);
     }
 
     public override string ToString()

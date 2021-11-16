@@ -373,10 +373,10 @@ MonoBehaviour:
     m_Name: ColorMap
   _depthMapProperty:
     m_Name: DepthMap
-  _projectionVectorProperty:
-    m_Name: ProjectionVector
-  _inverseViewMatrixProperty:
-    m_Name: InverseViewMatrix
+  _rayParamsProperty:
+    m_Name: RayParams
+  _inverseViewProperty:
+    m_Name: InverseView
 --- !u!114 &1075504125
 MonoBehaviour:
   m_ObjectHideFlags: 0

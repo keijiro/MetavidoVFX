@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.HighDefinition;
+using Bibcam.Common;
 using Bibcam.Decoder;
 
 namespace Bibcam {
@@ -8,11 +9,16 @@ namespace Bibcam {
 [System.Serializable]
 sealed class BibcamBackgroundPass : CustomPass
 {
+    #region Scene object references
+
+    [SerializeField] BibcamMetadataDecoder _decoder = null;
+    [SerializeField] BibcamTextureDemuxer _demux = null;
+
+    #endregion
+
     #region Editable attributes
 
-    [SerializeField] BibcamTextureDemuxer _demux = null;
-    [SerializeField, ColorUsage(false)] Color _fillTint = Color.white;
-    [SerializeField] Color _gridColor = Color.white;
+    [SerializeField] Color _depthColor = Color.white;
     [SerializeField] Color _stencilColor = Color.red;
     [SerializeField] float _depthOffset = 0;
     [SerializeField] Shader _shader = null;
@@ -29,7 +35,7 @@ sealed class BibcamBackgroundPass : CustomPass
 
     protected override void Execute(CustomPassContext context)
     {
-        if (_demux == null || _shader == null) return;
+        if (_decoder == null || _demux == null || _shader == null) return;
 
         // Run it only when the textures are ready.
         if (_demux.ColorTexture == null) return;
@@ -39,18 +45,20 @@ sealed class BibcamBackgroundPass : CustomPass
             _material = CoreUtils.CreateEngineMaterial(_shader);
 
         // Camera parameters
-        var ray = BibcamRenderUtils.RayParams(context.hdCamera.camera);
-        var iview = BibcamRenderUtils.InverseView(context.hdCamera.camera);
+        var meta = _decoder.Metadata;
+        var ray = BibcamRenderUtils.RayParams(meta);
+        var iview = BibcamRenderUtils.InverseView(meta);
 
         // Material property update
-        _material.SetFloat(ShaderID.DepthOffset, _depthOffset);
-        _material.SetColor(ShaderID.TintColor, _fillTint);
-        _material.SetColor(ShaderID.GridColor, _gridColor);
-        _material.SetColor(ShaderID.StencilColor, _stencilColor);
         _material.SetVector(ShaderID.RayParams, ray);
         _material.SetMatrix(ShaderID.InverseView, iview);
+        _material.SetVector(ShaderID.DepthRange, meta.DepthRange);
+        _material.SetColor(ShaderID.DepthColor, _depthColor);
+        _material.SetColor(ShaderID.StencilColor, _stencilColor);
         _material.SetTexture(ShaderID.ColorTexture, _demux.ColorTexture);
         _material.SetTexture(ShaderID.DepthTexture, _demux.DepthTexture);
+
+        _material.SetFloat("_DepthOffset", _depthOffset);
 
         // Fullscreen quad drawcall
         CoreUtils.DrawFullScreen(context.cmd, _material);

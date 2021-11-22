@@ -86,10 +86,11 @@
       }
     },
     "jp.keijiro.bibcam": {
-      "version": "file:../../Bibcam/Packages/jp.keijiro.bibcam",
+      "version": "1.0.0",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.shadergraphassets": {
       "version": "1.0.4",

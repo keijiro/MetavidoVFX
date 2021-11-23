@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "com.unity.render-pipelines.high-definition": "12.1.1",
-    "jp.keijiro.bibcam": "1.0.0",
+    "jp.keijiro.bibcam": "2.0.0",
     "jp.keijiro.vfxgraphassets": "1.0.8"
   }
 }

@@ -28,6 +28,10 @@ class VFXBibcamBinder : VFXBinderBase
       { get => (string)_inverseViewProperty;
         set => _inverseViewProperty = value; }
 
+    public string DepthRangeProperty
+      { get => (string)_depthRangeProperty;
+        set => _depthRangeProperty = value; }
+
     [VFXPropertyBinding("UnityEngine.Texture2D"), SerializeField]
     ExposedProperty _colorMapProperty = "ColorMap";
 
@@ -40,12 +44,16 @@ class VFXBibcamBinder : VFXBinderBase
     [VFXPropertyBinding("UnityEngine.Matrix4x4"), SerializeField]
     ExposedProperty _inverseViewProperty = "InverseView";
 
+    [VFXPropertyBinding("UnityEngine.Vector2"), SerializeField]
+    ExposedProperty _depthRangeProperty = "DepthRange";
+
     public override bool IsValid(VisualEffect component)
       => _decoder != null && _demux != null &&
          component.HasTexture(_colorMapProperty) &&
          component.HasTexture(_depthMapProperty) &&
          component.HasVector4(_rayParamsProperty) &&
-         component.HasMatrix4x4(_inverseViewProperty);
+         component.HasMatrix4x4(_inverseViewProperty) &&
+         component.HasVector2(_depthRangeProperty);
 
     public override void UpdateBinding(VisualEffect component)
     {
@@ -62,6 +70,7 @@ class VFXBibcamBinder : VFXBinderBase
         component.SetTexture(_depthMapProperty, _demux.DepthTexture);
         component.SetVector4(_rayParamsProperty, ray);
         component.SetMatrix4x4(_inverseViewProperty, iview);
+        component.SetVector2(_depthRangeProperty, meta.DepthRange);
     }
 
     public override string ToString()

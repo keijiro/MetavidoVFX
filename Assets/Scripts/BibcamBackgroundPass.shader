@@ -56,12 +56,23 @@ void FullScreenPass(Varyings varyings,
 
     // Blending
     float3 rgb = color.rgb;
+    /*
     rgb = lerp(rgb, _DepthColor.rgb, _DepthColor.a * d_ovr);
     rgb = lerp(rgb, _StencilColor.rgb, _StencilColor.a * s_edge);
+    */
 
     // Output
+    //if (d_far < 0.99) discard;
+    rgb = FastLinearToSRGB(rgb);
+    rgb = dot(rgb, 1.0 / 3);
+    rgb = round(rgb * 3) / 3;
+    rgb *= float3(0.5, 0.7, 0.9);
+    rgb = FastSRGBToLinear(rgb);
+
+    rgb *= smoothstep(_DepthRange.y - 1, _DepthRange.y, depth);
+
     outColor = float4(rgb, 1);
-    outDepth = DistanceToDepth(depth) + _DepthOffset;
+    outDepth = DistanceToDepth(depth + _DepthOffset + 10);
 }
 
     ENDHLSL

@@ -175,9 +175,7 @@ MonoBehaviour:
         m_Version: 0
         _decoder: {fileID: 467884317}
         _demux: {fileID: 467884316}
-        _depthOffset: -0.1
-        _depthColor: {r: 1, g: 1, b: 1, a: 1}
-        _stencilColor: {r: 0.83683777, g: 0, b: 1, a: 0.7490196}
+        _fillColor: {r: 0, g: 0.13126163, b: 0.254717, a: 1}
         _shader: {fileID: 4800000, guid: 3f0e30593d9734eb0a016ea4acaa2f68, type: 3}
 --- !u!4 &192106049
 Transform:

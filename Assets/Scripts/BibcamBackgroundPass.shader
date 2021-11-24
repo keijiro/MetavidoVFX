@@ -11,14 +11,10 @@ sampler2D _DepthTexture;
 float4 _RayParams;
 float4x4 _InverseView;
 float2 _DepthRange;
-float _DepthOffset;
 
-float4 _DepthColor;
-float4 _StencilColor;
+float4 _FillColor;
 
-void FullScreenPass(Varyings varyings,
-                    out float4 outColor : SV_Target,
-                    out float outDepth : SV_Depth)
+float4 FullScreenPass(Varyings varyings) : SV_Target
 {
     // Calculate the UV coordinates from varyings
     float2 uv = (varyings.positionCS.xy + float2(0.5, 0.5)) * _ScreenSize.zw;
@@ -27,52 +23,20 @@ void FullScreenPass(Varyings varyings,
     float4 color = tex2D(_ColorTexture, uv);
     float depth = tex2D(_DepthTexture, uv).x;
 
-    // World space position
-    float3 wpos = DistanceToWorldPosition
-      (uv, depth, _RayParams, _InverseView);
+    // Dither pattern
+    const float4x4 bayer =
+      float4x4(0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5) / 16;
+    uint2 cs = varyings.positionCS / 2;
+    float dither = bayer[cs.y & 3][cs.x & 3] - 0.5;
 
-    // Depth range mask
-    float d_near = 1 - smoothstep(0.0, 0.1, depth - _DepthRange.x);
-    float d_far = smoothstep(-0.1, 0, depth - _DepthRange.y);
-    float d_safe = 1 - max(d_near, d_far);
-
-    // Zebra pattern
-    float zebra = frac(dot(uv, 20)) < 0.25;
-
-    // 3-axis grid lines
-    float3 wpc = wpos * 5;
-    wpc = min(frac(1 - wpc), frac(wpc)) / fwidth(wpc);
-    wpc = 1 - saturate(wpc * 0.5);
-    float grid = max(max(wpc.x, wpc.y), wpc.z);
-
-    // Depth overlay
-    float d_ovr = d_safe * grid;
-    d_ovr = max(d_ovr, d_near * zebra);
-    d_ovr = max(d_ovr, d_far * zebra);
-
-    // Stencil edge lines
-    float s_edge = color.a * 2 - 1;
-    s_edge = saturate(1 - 0.2 * abs(s_edge / fwidth(s_edge)));
-
-    // Blending
-    float3 rgb = color.rgb;
-    /*
-    rgb = lerp(rgb, _DepthColor.rgb, _DepthColor.a * d_ovr);
-    rgb = lerp(rgb, _StencilColor.rgb, _StencilColor.a * s_edge);
-    */
+    // Image effects
+    float l = 1 - Luminance(FastLinearToSRGB(color.rgb));
+    l *= saturate(depth - _DepthRange.y + 1);
+    l += dither;
+    float3 rgb = (l > 0.5) * _FillColor.rgb;
 
     // Output
-    //if (d_far < 0.99) discard;
-    rgb = FastLinearToSRGB(rgb);
-    rgb = dot(rgb, 1.0 / 3);
-    rgb = round(rgb * 3) / 3;
-    rgb *= float3(0.5, 0.7, 0.9);
-    rgb = FastSRGBToLinear(rgb);
-
-    rgb *= smoothstep(_DepthRange.y - 1, _DepthRange.y, depth);
-
-    outColor = float4(rgb, 1);
-    outDepth = DistanceToDepth(depth + _DepthOffset + 10);
+    return float4(rgb, 1);
 }
 
     ENDHLSL
@@ -81,7 +45,7 @@ void FullScreenPass(Varyings varyings,
     {
         Pass
         {
-            Cull Off ZWrite On ZTest LEqual
+            Cull Off ZWrite Off ZTest LEqual
             HLSLPROGRAM
             #pragma vertex Vert
             #pragma fragment FullScreenPass

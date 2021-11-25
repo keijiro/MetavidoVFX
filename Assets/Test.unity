@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 464427124}
   - component: {fileID: 464427123}
   - component: {fileID: 464427125}
+  - component: {fileID: 464427126}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -323,6 +324,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _decoder: {fileID: 467884317}
   _demuxer: {fileID: 467884316}
+--- !u!114 &464427126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464427122}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086188ebd545c47989752f03115ec83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &467884315
 GameObject:
   m_ObjectHideFlags: 0

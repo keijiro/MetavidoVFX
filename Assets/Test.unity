@@ -175,7 +175,7 @@ MonoBehaviour:
         m_Version: 0
         _decoder: {fileID: 467884317}
         _demux: {fileID: 467884316}
-        _fillColor: {r: 0, g: 0.13126163, b: 0.254717, a: 1}
+        _fillColor: {r: 0, g: 0.25863573, b: 0.509434, a: 1}
         _shader: {fileID: 4800000, guid: 3f0e30593d9734eb0a016ea4acaa2f68, type: 3}
 --- !u!4 &192106049
 Transform:
@@ -278,8 +278,8 @@ VideoPlayer:
   m_RenderMode: 4
   m_AspectRatio: 2
   m_DataSource: 1
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_PlaybackSpeed: 0.5
+  m_AudioOutputMode: 0
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:

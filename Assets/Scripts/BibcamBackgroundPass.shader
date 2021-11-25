@@ -31,7 +31,7 @@ float4 FullScreenPass(Varyings varyings) : SV_Target
 
     // Image effects
     float l = 1 - Luminance(FastLinearToSRGB(color.rgb));
-    l *= saturate(depth - _DepthRange.y + 1);
+    l *= saturate(depth - _DepthRange.y + 1.5);
     l += dither;
     float3 rgb = (l > 0.5) * _FillColor.rgb;
 

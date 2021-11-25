@@ -1968,7 +1968,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.02
+      m_SerializableObject: 0.025
     m_Space: 2147483647
   m_Property:
     name: Size
@@ -6394,7 +6394,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.03823911026120186},{"color":{"r":0.05098039656877518,"g":0.8196078538894653,"b":0.7170071601867676,"a":1.0},"time":0.8705882430076599},{"color":{"r":9.89079475402832,"g":145.31857299804688,"b":109.6857681274414,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.03823911026120186},{"color":{"r":0.05098039656877518,"g":0.8196078538894653,"b":0.7170071601867676,"a":1.0},"time":0.8705882430076599},{"color":{"r":7.027451038360596,"g":95.87451171875,"b":72.78431701660156,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: gradient
@@ -7473,7 +7473,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.46666669845581057,"g":0.7456851005554199,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":25.68893814086914,"g":25.68893814086914,"b":25.68893814086914,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.46666669845581057,"g":0.7456851005554199,"b":1.0,"a":1.0},"time":0.0},{"color":{"r":11.98431396484375,"g":11.98431396484375,"b":11.98431396484375,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: Color

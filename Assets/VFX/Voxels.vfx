@@ -99,7 +99,9 @@ MonoBehaviour:
       id: 0
       isStickyNote: 0
   stickyNoteInfos: []
-  categories: []
+  categories:
+  - name: Bibcam Data
+    collapsed: 0
   uiBounds:
     serializedVersion: 2
     x: -1423
@@ -154,6 +156,19 @@ MonoBehaviour:
   m_UISuperCollapsed: 0
   m_UIInfos: {fileID: 114340500867371532}
   m_ParameterInfo:
+  - name: Bibcam Data
+    path: 
+    tooltip: 
+    sheetType: 
+    realType: 
+    defaultValue:
+      m_Type:
+        m_SerializableType: 
+      m_SerializableObject: 
+    min: -Infinity
+    max: Infinity
+    enumValues: []
+    descendantCount: 0
   - name: ColorMap
     path: ColorMap
     tooltip: 
@@ -645,7 +660,7 @@ MonoBehaviour:
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
-  title: Point Cloud
+  title: Voxels
   m_Owners:
   - {fileID: 8926484042661614558}
   - {fileID: 8926484042661614583}
@@ -675,7 +690,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614687}
   - {fileID: 8926484042661614742}
   - {fileID: 8926484042661614914}
-  m_UIPosition: {x: 942, y: 1576}
+  m_UIPosition: {x: 941, y: 1496}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -732,7 +747,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -740,7 +755,7 @@ MonoBehaviour:
   m_ExposedName: ColorMap
   m_Exposed: 1
   m_Order: 0
-  m_Category: 
+  m_Category: Bibcam Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -812,7 +827,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -820,7 +835,7 @@ MonoBehaviour:
   m_ExposedName: DepthMap
   m_Exposed: 1
   m_Order: 1
-  m_Category: 
+  m_Category: Bibcam Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -892,7 +907,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -900,7 +915,7 @@ MonoBehaviour:
   m_ExposedName: RayParams
   m_Exposed: 1
   m_Order: 2
-  m_Category: 
+  m_Category: Bibcam Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -1108,7 +1123,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -1116,7 +1131,7 @@ MonoBehaviour:
   m_ExposedName: InverseView
   m_Exposed: 1
   m_Order: 3
-  m_Category: 
+  m_Category: Bibcam Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -1310,10 +1325,11 @@ MonoBehaviour:
   m_UISuperCollapsed: 0
   m_InputSlots:
   - {fileID: 8926484042661614663}
-  - {fileID: 8926484042661614664}
-  - {fileID: 8926484042661614665}
   - {fileID: 8926484042661614666}
+  - {fileID: 8926484042661614664}
+  - {fileID: 8926484042661614989}
   - {fileID: 8926484042661614667}
+  - {fileID: 8926484042661614665}
   - {fileID: 8926484042661614672}
   m_OutputSlots: []
   m_Disabled: 0
@@ -4038,7 +4054,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 458, y: 1804}
+  m_UIPosition: {x: 516, y: 1748}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5871,7 +5887,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -5879,7 +5895,7 @@ MonoBehaviour:
   m_ExposedName: DepthRange
   m_Exposed: 1
   m_Order: 4
-  m_Category: 
+  m_Category: Bibcam Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -6942,7 +6958,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 574, y: 1943}
+  m_UIPosition: {x: 632, y: 1888}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -9509,6 +9525,40 @@ MonoBehaviour:
     m_Space: 2147483647
   m_Property:
     name: z
+    m_serializedType:
+      m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+  m_Direction: 0
+  m_LinkedSlots: []
+--- !u!114 &8926484042661614989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f780aa281814f9842a7c076d436932e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 0}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 1
+  m_UISuperCollapsed: 0
+  m_MasterSlot: {fileID: 8926484042661614989}
+  m_MasterData:
+    m_Owner: {fileID: 8926484042661614662}
+    m_Value:
+      m_Type:
+        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: 0.002083333
+    m_Space: 2147483647
+  m_Property:
+    name: UV Margin
     m_serializedType:
       m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089

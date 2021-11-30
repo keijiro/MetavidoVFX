@@ -18,7 +18,7 @@ sealed class BibcamBackgroundPass : CustomPass
 
     #region Editable attributes
 
-    [SerializeField] Color _fillColor = Color.white;
+    [SerializeField] Color _tint = Color.white;
     [SerializeField] Shader _shader = null;
 
     #endregion
@@ -53,7 +53,7 @@ sealed class BibcamBackgroundPass : CustomPass
         _material.SetVector(ShaderID.DepthRange, meta.DepthRange);
         _material.SetTexture(ShaderID.ColorTexture, _demux.ColorTexture);
         _material.SetTexture(ShaderID.DepthTexture, _demux.DepthTexture);
-        _material.SetColor("_FillColor", _fillColor);
+        _material.SetColor("_Tint", _tint);
 
         // Fullscreen quad drawcall
         CoreUtils.DrawFullScreen(context.cmd, _material);

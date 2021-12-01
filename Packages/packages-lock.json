@@ -108,10 +108,19 @@
     },
     "jp.keijiro.bibcam": {
       "version": "2.0.3",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.bibcam.vfx": {
+      "version": "file:jp.keijiro.bibcam.vfx",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.visualeffectgraph": "12.0.0",
+        "jp.keijiro.bibcam": "2.0.3"
+      }
     },
     "jp.keijiro.shadergraphassets": {
       "version": "1.0.4",

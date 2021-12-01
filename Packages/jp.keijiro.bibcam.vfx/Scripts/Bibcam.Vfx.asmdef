@@ -1,0 +1,18 @@
+{
+    "name": "Bibcam.Vfx",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b5f587414423d4dc59cf0a18bf95250a",
+        "GUID:1d13b6103cd1e4c66a76babde2f48804",
+        "GUID:d04eb9c554ad44ceab303cecf0c0cf82"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

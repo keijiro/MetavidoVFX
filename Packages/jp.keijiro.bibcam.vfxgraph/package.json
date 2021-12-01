@@ -8,7 +8,7 @@
     "displayName": "BibcamVFX",
     "keywords": [ "unity" ],
     "license": "Unlicense",
-    "name": "jp.keijiro.bibcam.vfx",
+    "name": "jp.keijiro.bibcam.vfxgraph",
     "unity": "2021.1",
     "unityRelease": "0f1",
     "version": "1.0.0"

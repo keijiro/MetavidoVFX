@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &192106048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,10 +175,10 @@ MonoBehaviour:
         m_Version: 0
         _decoder: {fileID: 467884317}
         _demux: {fileID: 467884316}
-        _depthOffset: 0
+        _depthOffset: 0.3
         _depthColor: {r: 1, g: 0.8666667, b: 0.6, a: 0}
         _stencilColor: {r: 0.2980392, g: 1, b: 0.76601315, a: 0}
-        _tint: {r: 1, g: 1, b: 1, a: 1}
+        _tint: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
         _shader: {fileID: 4800000, guid: e10ad5bae60fd4efab8943f6ff9e9ffa, type: 3}
 --- !u!4 &192106049
 Transform:
@@ -454,11 +454,11 @@ VFXRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759754755}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
-  m_MotionVectors: 0
+  m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
@@ -501,7 +501,10 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 0.05
+        m_Name: VoxelSize
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:

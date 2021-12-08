@@ -175,6 +175,9 @@ MonoBehaviour:
         m_Version: 0
         _decoder: {fileID: 467884317}
         _demux: {fileID: 467884316}
+        _depthOffset: 0
+        _depthColor: {r: 1, g: 1, b: 1, a: 1}
+        _stencilColor: {r: 1, g: 0, b: 0, a: 1}
         _tint: {r: 0, g: 0.25863573, b: 0.509434, a: 1}
         _shader: {fileID: 4800000, guid: 3f0e30593d9734eb0a016ea4acaa2f68, type: 3}
 --- !u!4 &192106049
@@ -592,10 +595,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1556319651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5edde0cad7afe6143a883d032d613547, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a5ee19bd9835470293185ee5602179a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _updateRate: 30
   _decoder: {fileID: 467884317}
 --- !u!1 &2112914348
 GameObject:

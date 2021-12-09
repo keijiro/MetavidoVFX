@@ -16,15 +16,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.recorder": {
-      "version": "4.0.0-pre.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.timeline": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.render-pipelines.core": {
       "version": "12.1.2",
       "depth": 1,
@@ -76,18 +67,6 @@
         "com.unity.searcher": "4.9.1"
       }
     },
-    "com.unity.timeline": {
-      "version": "1.6.2",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.director": "1.0.0",
-        "com.unity.modules.animation": "1.0.0",
-        "com.unity.modules.audio": "1.0.0",
-        "com.unity.modules.particlesystem": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.ugui": {
       "version": "1.0.0",
       "depth": 2,
@@ -107,7 +86,7 @@
       }
     },
     "jp.keijiro.bibcam": {
-      "version": "2.0.5",
+      "version": "2.0.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -119,7 +98,7 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.visualeffectgraph": "12.0.0",
-        "jp.keijiro.bibcam": "2.0.5"
+        "jp.keijiro.bibcam": "2.0.6"
       }
     },
     "jp.keijiro.shadergraphassets": {
@@ -152,15 +131,6 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.modules.director": {
-      "version": "1.0.0",
-      "depth": 2,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.modules.audio": "1.0.0",
-        "com.unity.modules.animation": "1.0.0"
-      }
-    },
     "com.unity.modules.imageconversion": {
       "version": "1.0.0",
       "depth": 1,
@@ -174,12 +144,6 @@
       "dependencies": {}
     },
     "com.unity.modules.jsonserialize": {
-      "version": "1.0.0",
-      "depth": 2,
-      "source": "builtin",
-      "dependencies": {}
-    },
-    "com.unity.modules.particlesystem": {
       "version": "1.0.0",
       "depth": 2,
       "source": "builtin",

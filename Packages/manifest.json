@@ -7,7 +7,6 @@
     }
   ],
   "dependencies": {
-    "com.unity.recorder": "4.0.0-pre.2",
     "com.unity.render-pipelines.high-definition": "12.1.2",
     "jp.keijiro.vfxgraphassets": "1.0.8"
   }

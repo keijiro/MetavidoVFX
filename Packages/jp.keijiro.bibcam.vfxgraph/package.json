@@ -2,7 +2,7 @@
     "author": "Keijiro Takahashi",
     "dependencies": {
         "com.unity.visualeffectgraph": "12.0.0",
-        "jp.keijiro.bibcam": "2.0.5"
+        "jp.keijiro.bibcam": "2.0.6"
     },
     "description": "VFX Graph extensions for Bibcam",
     "displayName": "BibcamVFX",
@@ -11,5 +11,5 @@
     "name": "jp.keijiro.bibcam.vfxgraph",
     "unity": "2021.1",
     "unityRelease": "0f1",
-    "version": "1.0.0"
+    "version": "1.0.2"
 }

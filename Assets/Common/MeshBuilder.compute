@@ -1,0 +1,79 @@
+#pragma kernel VertexKernel
+#pragma kernel IndexKernel
+
+// Workaround for the absence of sizeof operator in HLSL
+#define SIZEOF_UINT 4
+#define SIZEOF_FLOAT 4
+
+// Workaround for the missing _ZBufferParams issue
+float4 _ZBufferParams;
+
+#include "Packages/jp.keijiro.bibcam/Decoder/Shaders/Utils.hlsl"
+
+// Bibcam parameters
+sampler2D _DepthTexture;
+float4 _RayParams;
+float4x4 _InverseView;
+
+// Mesh builder parameters
+uint2 Dims;
+
+// Output buffer
+RWByteAddressBuffer VertexBuffer;
+RWByteAddressBuffer IndexBuffer;
+
+// Vertex buffer accessor
+void WriteVertex(uint offset, float3 p, float3 n, float2 t)
+{
+    uint addr_p = offset * SIZEOF_FLOAT * 8;
+    uint addr_n = addr_p + SIZEOF_FLOAT * 3;
+    uint addr_t = addr_n + SIZEOF_FLOAT * 3;
+    VertexBuffer.Store3(addr_p, asuint(p));
+    VertexBuffer.Store3(addr_n, asuint(n));
+    VertexBuffer.Store2(addr_t, asuint(t));
+}
+
+// Index buffer accessor
+void WriteIndices(uint offset, uint3 indices)
+{
+    IndexBuffer.Store3(offset * SIZEOF_UINT, indices);
+}
+
+float3 GetVertexPosition(float2 uv)
+{
+    float depth = tex2Dlod(_DepthTexture, float4(uv, 0, 0)).x;
+    return DistanceToWorldPosition(uv, depth, _RayParams, _InverseView);
+}
+
+[numthreads(8, 8, 1)]
+void VertexKernel(uint2 id : SV_DispatchThreadID)
+{
+    if (any(id >= Dims)) return;
+
+    float2 uv = (float2)id / (Dims - 1);
+    float3 d = float3(1.0 / (Dims - 1), 0);
+
+    float3 p = GetVertexPosition(uv);
+    float3 p_mdx = GetVertexPosition(uv - d.xz);
+    float3 p_pdx = GetVertexPosition(uv + d.xz);
+    float3 p_mdy = GetVertexPosition(uv - d.zy);
+    float3 p_pdy = GetVertexPosition(uv + d.zy);
+
+    float3 n = normalize(cross(p_pdy - p_mdy, p_pdx - p_mdx));
+
+    WriteVertex(Dims.x * id.y + id.x, p, n, uv);
+}
+
+[numthreads(8, 8, 1)]
+void IndexKernel(uint2 id : SV_DispatchThreadID)
+{
+    if (any(id >= Dims - 1)) return;
+
+    uint quad_i = id.y * (Dims.x - 1) + id.x;
+    uint i = quad_i * 3 * 2;
+
+    uint vi = Dims.x * id.y + id.x;
+
+    WriteIndices(i + 0, uint3(vi, vi + Dims.x, vi + 1));
+    WriteIndices(i + 3, uint3(vi + Dims.x, vi + Dims.x + 1, vi + 1));
+}

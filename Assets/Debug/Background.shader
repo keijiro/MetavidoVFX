@@ -1,4 +1,4 @@
-Shader "Hidden/Bibcam/HDRP/Background/Debug"
+Shader "Hidden/Bibcam/HDRP/Background"
 {
     HLSLINCLUDE
 

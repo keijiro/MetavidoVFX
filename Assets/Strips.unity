@@ -883,6 +883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _decoder: {fileID: 467884317}
   _demuxer: {fileID: 467884316}
+  _decimation: 15
   _compute: {fileID: 7200000, guid: 4948ea7293b9e4a2c8f804a926f679bb, type: 3}
 --- !u!4 &1593277038
 Transform:

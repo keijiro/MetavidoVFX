@@ -12,6 +12,7 @@ sealed class BibcamMeshBuilder : MonoBehaviour
 
     [SerializeField] BibcamMetadataDecoder _decoder = null;
     [SerializeField] BibcamTextureDemuxer _demuxer = null;
+    [SerializeField, Range(0, 31)] int _decimation = 7;
 
     #endregion
 
@@ -21,19 +22,22 @@ sealed class BibcamMeshBuilder : MonoBehaviour
 
     #endregion
 
+    #region Vertex/index counts
+
+    int ColumnCount => 1920 / (_decimation + 1);
+    int RowCount => 1080 / (_decimation + 1);
+    int VertexCount => ColumnCount * RowCount;
+    int TriangleCount => (ColumnCount - 1) * (RowCount - 1) * 2;
+    int IndexCount => TriangleCount * 3;
+
+    #endregion
+
     #region Private objects
 
     Mesh _mesh;
     GraphicsBuffer _vertexBuffer;
     GraphicsBuffer _indexBuffer;
     MaterialPropertyBlock _overrides;
-
-    const int Decimation = 8;
-    const int ColumnCount = 1920 / Decimation;
-    const int RowCount = 1080 / Decimation;
-    const int VertexCount = ColumnCount * RowCount;
-    const int TriangleCount = (ColumnCount - 1) * (RowCount - 1) * 2;
-    const int IndexCount = TriangleCount * 3;
 
     void PrepareMesh()
     {
@@ -81,6 +85,9 @@ sealed class BibcamMeshBuilder : MonoBehaviour
     #endregion
 
     #region MonoBehaviour implementation
+
+    void OnValidate()
+      => OnDestroy();
 
     void OnDisable()
       => OnDestroy();

@@ -51,7 +51,7 @@ void VertexKernel(uint2 id : SV_DispatchThreadID)
     if (any(id >= Dims)) return;
 
     float2 uv = (float2)id / (Dims - 1);
-    float3 d = float3(1.0 / (Dims - 1), 0);
+    float3 d = float3(2.0 / (Dims - 1), 0);
 
     float3 p = GetVertexPosition(uv);
     float3 p_mdx = GetVertexPosition(uv - d.xz);

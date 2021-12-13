@@ -21,7 +21,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.8
+    m_Value: 0.5
   directLightingStrength:
     m_OverrideState: 1
     m_Value: 1
@@ -104,8 +104,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   saturation:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 20
 --- !u!114 &-3181332395800245268
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -118,10 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1bfcd0f0fa7b8468f281d6bbbaf320, type: 3}
   m_Name: LensDistortion
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.22
   xMultiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -132,7 +132,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   scale:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1.13
 --- !u!114 &-1483818783537477552
 MonoBehaviour:
@@ -259,7 +259,7 @@ MonoBehaviour:
     m_Value: {x: 0.84266114, y: 0.9207917, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.8567604, z: 0.870534, w: 0}
+    m_Value: {x: 1, y: 0.95431834, z: 0.9683072, w: 0}
   gain:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}

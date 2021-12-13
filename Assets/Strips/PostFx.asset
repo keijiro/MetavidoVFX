@@ -32,7 +32,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0.15
   temporalAccumulation:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   ghostingReduction:
     m_OverrideState: 0
@@ -256,10 +256,10 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 0.8047297, y: 0.8974691, z: 1, w: 0}
+    m_Value: {x: 0.84266114, y: 0.9207917, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.7731852, z: 0.7577883, w: 0}
+    m_Value: {x: 1, y: 0.8567604, z: 0.870534, w: 0}
   gain:
     m_OverrideState: 0
     m_Value: {x: 1, y: 1, z: 1, w: 0}

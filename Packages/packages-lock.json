@@ -101,12 +101,20 @@
         "jp.keijiro.bibcam": "2.0.6"
       }
     },
-    "jp.keijiro.shadergraphassets": {
-      "version": "1.0.4",
+    "jp.keijiro.noiseshader": {
+      "version": "2.0.0",
       "depth": 1,
       "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.shadergraphassets": {
+      "version": "1.0.6",
+      "depth": 0,
+      "source": "registry",
       "dependencies": {
-        "com.unity.shadergraph": "10.0.0"
+        "com.unity.shadergraph": "10.0.0",
+        "jp.keijiro.noiseshader": "2.0.0"
       },
       "url": "https://registry.npmjs.com"
     },

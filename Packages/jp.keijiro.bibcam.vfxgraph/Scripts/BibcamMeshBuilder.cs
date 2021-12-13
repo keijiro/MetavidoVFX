@@ -138,6 +138,7 @@ sealed class BibcamMeshBuilder : MonoBehaviour
         if (_overrides == null) _overrides = new MaterialPropertyBlock();
         var renderer = GetComponent<MeshRenderer>();
         renderer.GetPropertyBlock(_overrides);
+        _overrides.SetVector(ShaderID.DepthRange, meta.DepthRange);
         _overrides.SetTexture(ShaderID.ColorTexture, _demuxer.ColorTexture);
         renderer.SetPropertyBlock(_overrides);
     }

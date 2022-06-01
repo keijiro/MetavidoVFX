@@ -3,12 +3,14 @@
     {
       "name": "Keijiro",
       "url": "https://registry.npmjs.com",
-      "scopes": [ "jp.keijiro" ]
+      "scopes": [
+        "jp.keijiro"
+      ]
     }
   ],
   "dependencies": {
-    "com.unity.render-pipelines.high-definition": "12.1.2",
-    "jp.keijiro.shadergraphassets": "1.0.6",
-    "jp.keijiro.vfxgraphassets": "1.0.8"
+    "com.unity.render-pipelines.high-definition": "12.1.6",
+    "jp.keijiro.shadergraphassets": "2.5.1",
+    "jp.keijiro.vfxgraphassets": "1.0.10"
   }
 }

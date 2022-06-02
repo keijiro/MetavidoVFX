@@ -326,6 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _decoder: {fileID: 467884317}
   _demuxer: {fileID: 467884316}
+  _asynchronous: 1
 --- !u!1 &467884315
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94509387823624a3db4b2fb0c365adb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _margin: 1
   _shader: {fileID: 4800000, guid: add5a8d52e2e749119e249f0a762eb85, type: 3}
 --- !u!114 &467884317
 MonoBehaviour:
@@ -599,6 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _decoder: {fileID: 467884317}
+  _interpolation: 1
 --- !u!1 &2112914348
 GameObject:
   m_ObjectHideFlags: 0

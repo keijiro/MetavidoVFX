@@ -364,6 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _decoder: {fileID: 467884317}
   _demuxer: {fileID: 467884316}
+  _asynchronous: 1
 --- !u!1 &467884315
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _decoder: {fileID: 467884317}
+  _interpolation: 1
 --- !u!1 &1593277035
 GameObject:
   m_ObjectHideFlags: 0

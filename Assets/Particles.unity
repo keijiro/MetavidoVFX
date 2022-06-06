@@ -178,8 +178,8 @@ MonoBehaviour:
         _depthOffset: 1
         _depthColor: {r: 1, g: 1, b: 1, a: 0}
         _stencilColor: {r: 1, g: 0, b: 0, a: 0}
-        _tint: {r: 0.40824136, g: 0.5970052, b: 0.6226415, a: 1}
-        _shader: {fileID: 4800000, guid: e10ad5bae60fd4efab8943f6ff9e9ffa, type: 3}
+        _tint: {r: 0, g: 0.5666666, b: 1, a: 1}
+        _shader: {fileID: 4800000, guid: eee3843fc95097749b510a650726cc1d, type: 3}
 --- !u!4 &371652124
 Transform:
   m_ObjectHideFlags: 0

@@ -175,7 +175,7 @@ MonoBehaviour:
         m_Version: 0
         _decoder: {fileID: 467884317}
         _demux: {fileID: 467884316}
-        _depthOffset: 1
+        _depthOffset: 0
         _depthColor: {r: 1, g: 1, b: 1, a: 0}
         _stencilColor: {r: 1, g: 0, b: 0, a: 0}
         _tint: {r: 0, g: 0.5666666, b: 1, a: 1}
@@ -407,11 +407,11 @@ VFXRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759754755}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
-  m_MotionVectors: 1
+  m_MotionVectors: 0
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0

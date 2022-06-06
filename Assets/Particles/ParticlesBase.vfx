@@ -266,8 +266,8 @@ VisualEffectResource:
   m_Graph: {fileID: 114350483966674976}
   m_Infos:
     m_RendererSettings:
-      motionVectorGenerationMode: 1
-      shadowCastingMode: 1
+      motionVectorGenerationMode: 0
+      shadowCastingMode: 0
       receiveShadows: 0
       reflectionProbeUsage: 0
       lightProbeUsage: 0
@@ -2030,7 +2030,7 @@ MonoBehaviour:
   - link: []
   blendMode: 0
   useAlphaClipping: 0
-  generateMotionVector: 1
+  generateMotionVector: 0
   excludeFromTAA: 0
   sortingPriority: 0
   m_SubOutputs:
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   indirectDraw: 0
   computeCulling: 0
   frustumCulling: 0
-  castShadows: 1
+  castShadows: 0
   useExposureWeight: 0
   flipbookLayout: 0
   shaderGraph: {fileID: -5475051401550479605, guid: 70779decd6e0d5a47a50a48a36b44833, type: 3}

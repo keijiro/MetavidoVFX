@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 759754758}
   - component: {fileID: 759754757}
   - component: {fileID: 759754756}
+  - component: {fileID: 759754761}
   m_Layer: 0
   m_Name: Particles
   m_TagString: Untagged
@@ -397,6 +398,7 @@ MonoBehaviour:
   m_ExecuteInEditor: 1
   m_Bindings:
   - {fileID: 759754756}
+  - {fileID: 759754761}
   m_VisualEffect: {fileID: 759754759}
 --- !u!73398921 &759754758
 VFXRenderer:
@@ -458,12 +460,39 @@ VisualEffect:
       - m_Value: 0.08
         m_Name: VoxelSize
         m_Overridden: 1
+      - m_Value: 1.7777778
+        m_Name: Camera_aspectRatio
+        m_Overridden: 1
+      - m_Value: 50
+        m_Name: Camera_farPlane
+        m_Overridden: 1
+      - m_Value: 0.7853982
+        m_Name: Camera_fieldOfView
+        m_Overridden: 1
+      - m_Value: 0.01
+        m_Name: Camera_nearPlane
+        m_Overridden: 1
     m_Vector2f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 1920, y: 1080}
+        m_Name: Camera_pixelDimensions
+        m_Overridden: 1
     m_Vector3f:
       m_Array:
       - m_Value: {x: 3.098, y: -0.46, z: -0.044}
         m_Name: Center
+        m_Overridden: 1
+      - m_Value: {x: -0, y: 0, z: 0}
+        m_Name: Camera_transform_angles
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 1, z: -10}
+        m_Name: Camera_transform_position
+        m_Overridden: 1
+      - m_Value: {x: 1, y: 1, z: 1}
+        m_Name: Camera_transform_scale
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 1, z: -10}
+        m_Name: Camera Position
         m_Overridden: 1
     m_Vector4f:
       m_Array: []
@@ -478,7 +507,13 @@ VisualEffect:
     m_Gradient:
       m_Array: []
     m_NamedObject:
-      m_Array: []
+      m_Array:
+      - m_Value: {fileID: 0}
+        m_Name: Camera_colorBuffer
+        m_Overridden: 1
+      - m_Value: {fileID: 0}
+        m_Name: Camera_depthBuffer
+        m_Overridden: 1
     m_Bool:
       m_Array: []
 --- !u!4 &759754760
@@ -496,6 +531,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &759754761
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759754755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c3070554d0a8944a95ff8f018c2c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Property:
+    m_Name: Camera Position
+  Target: {fileID: 1556319654}
 --- !u!1 &1556319651
 GameObject:
   m_ObjectHideFlags: 0

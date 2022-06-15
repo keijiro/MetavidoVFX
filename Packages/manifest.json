@@ -12,6 +12,7 @@
     "com.unity.render-pipelines.high-definition": "12.1.7",
     "jp.keijiro.bibcam": "3.1.0",
     "jp.keijiro.kino.post-processing": "2.1.15",
+    "jp.keijiro.klak.motion": "1.0.2",
     "jp.keijiro.shadergraphassets": "2.5.1",
     "jp.keijiro.vfxgraphassets": "1.0.10"
   }

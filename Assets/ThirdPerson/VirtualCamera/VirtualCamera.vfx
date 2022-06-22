@@ -267,9 +267,9 @@ MonoBehaviour:
     collapsed: 0
   uiBounds:
     serializedVersion: 2
-    x: 44
+    x: 43
     y: -419
-    width: 6718
+    width: 6719
     height: 2581
 --- !u!114 &114350483966674976
 MonoBehaviour:
@@ -364,7 +364,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.3777415156364441,"g":1.3195079565048218,"b":1.3195079565048218,"a":1.0}'
+      m_SerializableObject: '{"r":0.15307527780532838,"g":0.4819599390029907,"b":0.4819599390029907,"a":1.0}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -1792,7 +1792,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.0,"g":1.2869292497634888,"b":1.429921269416809,"a":1.0}'
+      m_SerializableObject: '{"r":0.36586296558380129,"g":0.6526942253112793,"b":0.6843790411949158,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: _Color
@@ -2123,7 +2123,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.3777415156364441,"g":1.3195079565048218,"b":1.3195079565048218,"a":1.0}'
+      m_SerializableObject: '{"r":0.15307527780532838,"g":0.4819599390029907,"b":0.4819599390029907,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: o
@@ -11491,7 +11491,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.23584908246994019,"g":0.23584908246994019,"b":0.23584908246994019,"a":1.0}'
+      m_SerializableObject: '{"r":0.5566037893295288,"g":0.5566037893295288,"b":0.5566037893295288,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: 
@@ -21018,7 +21018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
@@ -28748,7 +28748,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.1603773832321167,"g":0.1603773832321167,"b":0.1603773832321167,"a":1.0}'
+      m_SerializableObject: '{"r":0.6226415038108826,"g":0.6226415038108826,"b":0.6226415038108826,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: 

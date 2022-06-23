@@ -125,10 +125,10 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: 652
+    x: 651
     y: -117
-    width: 896
-    height: 159
+    width: 902
+    height: 160
 --- !u!114 &27
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   - {fileID: 74}
   m_ExposedName: Position
   m_Exposed: 1
-  m_Order: 4
+  m_Order: 0
   m_Category: 
   m_Min:
     m_Type:
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   - {fileID: 80}
   m_ExposedName: Offset
   m_Exposed: 1
-  m_Order: 5
+  m_Order: 1
   m_Category: 
   m_Min:
     m_Type:
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_OutputSlots: []
   m_ExposedName: Output
   m_Exposed: 0
-  m_Order: 6
+  m_Order: 2
   m_Category: 
   m_Min:
     m_Type:
@@ -1606,7 +1606,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 59}
       inputSlot: {fileID: 89}
-    position: {x: 1428.5, y: -73.5}
+    position: {x: 1432.6666, y: -76}
     expandedSlots: []
     expanded: 0
 --- !u!114 &89
@@ -1803,7 +1803,7 @@ MonoBehaviour:
   - {fileID: 95}
   m_ExposedName: Scale
   m_Exposed: 1
-  m_Order: 7
+  m_Order: 3
   m_Category: 
   m_Min:
     m_Type:

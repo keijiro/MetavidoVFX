@@ -494,6 +494,9 @@ VisualEffect:
       - m_Value: {x: 0, y: 1, z: -10}
         m_Name: Camera Position
         m_Overridden: 1
+      - m_Value: {x: 0, y: 1, z: -10}
+        m_Name: EffectOrigin
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -544,7 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Property:
-    m_Name: Center
+    m_Name: EffectOrigin
   Target: {fileID: 1556319654}
 --- !u!1 &1556319651
 GameObject:

@@ -268,8 +268,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1285
     y: -692
-    width: 2805
-    height: 588
+    width: 2807
+    height: 590
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ MonoBehaviour:
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 0
 --- !u!114 &34
 MonoBehaviour:
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   - {fileID: 70}
   m_ExposedName: InverseView
   m_Exposed: 1
-  m_Order: 6
+  m_Order: 5
   m_Category: Bibcam Data
   m_Min:
     m_Type:
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   - {fileID: 72}
   m_ExposedName: RayParams
   m_Exposed: 1
-  m_Order: 4
+  m_Order: 3
   m_Category: Bibcam Data
   m_Min:
     m_Type:
@@ -2644,7 +2644,7 @@ MonoBehaviour:
   - {fileID: 153}
   m_ExposedName: DepthOffset
   m_Exposed: 1
-  m_Order: 5
+  m_Order: 4
   m_Category: Parameters
   m_Min:
     m_Type:

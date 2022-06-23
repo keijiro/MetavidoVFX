@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 759754756}
   - component: {fileID: 759754761}
   m_Layer: 0
-  m_Name: Particles
+  m_Name: Effect Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 1368439930}
   - component: {fileID: 1368439929}
   m_Layer: 0
-  m_Name: Long
+  m_Name: Sparse Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

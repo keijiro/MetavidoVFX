@@ -2494,7 +2494,7 @@ GameObject:
   - component: {fileID: 1368439930}
   - component: {fileID: 1368439929}
   m_Layer: 0
-  m_Name: Sparse Particles
+  m_Name: Afterimage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3117,7 +3117,7 @@ GameObject:
   - component: {fileID: 1597445384}
   - component: {fileID: 1597445383}
   m_Layer: 0
-  m_Name: Marker
+  m_Name: Markers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

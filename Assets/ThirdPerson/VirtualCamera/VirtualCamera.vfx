@@ -30204,7 +30204,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.03529411181807518,"g":0.06501173973083496,"b":0.30980393290519717,"a":1.0}'
+      m_SerializableObject: '{"r":0.5211760997772217,"g":0.9582915306091309,"b":4.287093639373779,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: _Color

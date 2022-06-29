@@ -2,7 +2,7 @@
   "dependencies": {
     "com.unity.burst": {
       "version": "1.6.5",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1"
@@ -18,7 +18,7 @@
     },
     "com.unity.render-pipelines.core": {
       "version": "12.1.7",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
@@ -28,7 +28,7 @@
     },
     "com.unity.render-pipelines.high-definition": {
       "version": "12.1.7",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.mathematics": "1.2.4",
@@ -45,7 +45,7 @@
     },
     "com.unity.render-pipelines.high-definition-config": {
       "version": "12.1.7",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "12.1.7"
@@ -69,7 +69,7 @@
     },
     "com.unity.ugui": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.ui": "1.0.0",
@@ -87,7 +87,7 @@
     },
     "jp.keijiro.bibcam": {
       "version": "3.1.0",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.com"
@@ -98,7 +98,7 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.visualeffectgraph": "12.1.0",
-        "jp.keijiro.bibcam": "3.0.0"
+        "jp.keijiro.bibcam": "3.1.0"
       }
     },
     "jp.keijiro.kino.post-processing": {
@@ -154,61 +154,61 @@
     },
     "com.unity.modules.animation": {
       "version": "1.0.0",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.audio": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.imageconversion": {
       "version": "1.0.0",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.imgui": {
       "version": "1.0.0",
-      "depth": 3,
+      "depth": 4,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.jsonserialize": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.physics": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.terrain": {
       "version": "1.0.0",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.ui": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.unitywebrequest": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.video": {
       "version": "1.0.0",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.audio": "1.0.0",

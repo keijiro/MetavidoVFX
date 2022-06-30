@@ -2,7 +2,7 @@
   "dependencies": {
     "com.unity.burst": {
       "version": "1.6.5",
-      "depth": 2,
+      "depth": 3,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1"
@@ -11,7 +11,7 @@
     },
     "com.unity.mathematics": {
       "version": "1.2.6",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -28,7 +28,7 @@
     },
     "com.unity.render-pipelines.high-definition": {
       "version": "12.1.7",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.mathematics": "1.2.4",
@@ -45,7 +45,7 @@
     },
     "com.unity.render-pipelines.high-definition-config": {
       "version": "12.1.7",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "12.1.7"
@@ -53,14 +53,14 @@
     },
     "com.unity.searcher": {
       "version": "4.9.1",
-      "depth": 2,
+      "depth": 3,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
       "version": "12.1.7",
-      "depth": 1,
+      "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "12.1.7",
@@ -106,12 +106,17 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "jp.keijiro.bibcam.vfxgraph": "1.1.0"
+        "jp.keijiro.bibcam.vfxgraph": "1.1.0",
+        "jp.keijiro.kino.post-processing": "2.1.15",
+        "jp.keijiro.klak.motion": "1.0.2",
+        "jp.keijiro.metawire": "1.3.1",
+        "jp.keijiro.shadergraphassets": "2.5.1",
+        "jp.keijiro.vfxgraphassets": "1.1.1"
       }
     },
     "jp.keijiro.kino.post-processing": {
       "version": "2.1.15",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.render-pipelines.high-definition": "7.4.1"
@@ -120,7 +125,7 @@
     },
     "jp.keijiro.klak.motion": {
       "version": "1.0.2",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1"
@@ -129,21 +134,21 @@
     },
     "jp.keijiro.metawire": {
       "version": "1.3.1",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.noiseshader": {
       "version": "2.0.0",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.shadergraphassets": {
       "version": "2.5.1",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.shadergraph": "12.1.0",
@@ -153,7 +158,7 @@
     },
     "jp.keijiro.vfxgraphassets": {
       "version": "1.1.1",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "jp.keijiro.shadergraphassets": "1.0.4"
@@ -162,19 +167,19 @@
     },
     "com.unity.modules.animation": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.audio": {
       "version": "1.0.0",
-      "depth": 3,
+      "depth": 4,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.imageconversion": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
@@ -198,25 +203,25 @@
     },
     "com.unity.modules.terrain": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.ui": {
       "version": "1.0.0",
-      "depth": 3,
+      "depth": 4,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.unitywebrequest": {
       "version": "1.0.0",
-      "depth": 3,
+      "depth": 4,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.video": {
       "version": "1.0.0",
-      "depth": 2,
+      "depth": 3,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.audio": "1.0.0",

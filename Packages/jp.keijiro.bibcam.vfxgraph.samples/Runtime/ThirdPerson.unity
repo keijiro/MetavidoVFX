@@ -208,7 +208,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 247591328}
-        m_TargetAssemblyTypeName: Bibcam.EffectSwitcher, Assembly-CSharp
+        m_TargetAssemblyTypeName: Bibcam.EffectSwitcher, Bibcam.Vfx.Samples
         m_MethodName: SwitchEffect
         m_Mode: 3
         m_Arguments:
@@ -422,7 +422,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 247591328}
-        m_TargetAssemblyTypeName: Bibcam.EffectSwitcher, Assembly-CSharp
+        m_TargetAssemblyTypeName: Bibcam.EffectSwitcher, Bibcam.Vfx.Samples
         m_MethodName: SwitchEffect
         m_Mode: 3
         m_Arguments:
@@ -556,7 +556,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 882363113}
-        m_TargetAssemblyTypeName: BibcamVfx.CameraRigController, Assembly-CSharp
+        m_TargetAssemblyTypeName: BibcamVfx.CameraRigController, Bibcam.Vfx.Samples
         m_MethodName: SwitchToLongRangeView
         m_Mode: 1
         m_Arguments:
@@ -745,7 +745,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 247591328}
-        m_TargetAssemblyTypeName: Bibcam.EffectSwitcher, Assembly-CSharp
+        m_TargetAssemblyTypeName: Bibcam.EffectSwitcher, Bibcam.Vfx.Samples
         m_MethodName: SwitchEffect
         m_Mode: 3
         m_Arguments:
@@ -1096,7 +1096,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 247591328}
-        m_TargetAssemblyTypeName: Bibcam.EffectSwitcher, Assembly-CSharp
+        m_TargetAssemblyTypeName: Bibcam.EffectSwitcher, Bibcam.Vfx.Samples
         m_MethodName: SwitchEffect
         m_Mode: 3
         m_Arguments:
@@ -1230,7 +1230,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 882363113}
-        m_TargetAssemblyTypeName: BibcamVfx.CameraRigController, Assembly-CSharp
+        m_TargetAssemblyTypeName: BibcamVfx.CameraRigController, Bibcam.Vfx.Samples
         m_MethodName: SwitchToCloseRangeView
         m_Mode: 1
         m_Arguments:
@@ -2175,7 +2175,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 882363113}
-        m_TargetAssemblyTypeName: BibcamVfx.CameraRigController, Assembly-CSharp
+        m_TargetAssemblyTypeName: BibcamVfx.CameraRigController, Bibcam.Vfx.Samples
         m_MethodName: SwitchToFirstPersonView
         m_Mode: 1
         m_Arguments:

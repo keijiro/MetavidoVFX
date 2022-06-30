@@ -164,7 +164,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 1859664837924880384
-      type: {class: BibcamBackgroundPass, ns: Bibcam, asm: Assembly-CSharp}
+      type: {class: BibcamBackgroundPass, ns: Bibcam, asm: Bibcam.Vfx.Samples}
       data:
         m_Name: Bibcam
         enabled: 1

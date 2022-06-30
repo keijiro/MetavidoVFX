@@ -1,0 +1,14 @@
+{
+    "author": "Keijiro Takahashi",
+    "dependencies": {
+        "jp.keijiro.bibcam.vfxgraph": "1.1.0"
+    },
+    "description": "Sample assets for BibcamVFX",
+    "displayName": "BibcamVFX Samples",
+    "keywords": [ "unity" ],
+    "license": "Unlicense",
+    "name": "jp.keijiro.bibcam.vfxgraph.samples",
+    "unity": "2021.3",
+    "unityRelease": "0f1",
+    "version": "1.0.0"
+}

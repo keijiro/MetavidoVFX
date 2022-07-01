@@ -961,7 +961,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 118.794846
+  m_Intensity: 118.79485
   m_Range: 10
   m_SpotAngle: 60
   m_InnerSpotAngle: 6
@@ -2421,6 +2421,7 @@ MonoBehaviour:
   _floatingMotion: {fileID: 410025010}
   _targetFollow: {fileID: 882363111}
   _cameraVfx: {fileID: 1857374125}
+  _afterimageVfx: {fileID: 1368439932}
 --- !u!1 &932757132
 GameObject:
   m_ObjectHideFlags: 0

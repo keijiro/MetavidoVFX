@@ -14,6 +14,7 @@ public sealed class CameraRigController : MonoBehaviour
     [SerializeField] BrownianMotion _floatingMotion = null;
     [SerializeField] SmoothFollow _targetFollow = null;
     [SerializeField] VisualEffect _cameraVfx = null;
+    [SerializeField] VisualEffect _afterimageVfx = null;
 
     #endregion
 
@@ -66,6 +67,7 @@ public sealed class CameraRigController : MonoBehaviour
         _targetFollow.positionSpeed = _followSpeed * (8 - p * 7);
         _targetFollow.rotationSpeed = _followSpeed * (8 - p * 7);
         _cameraVfx.SetVector4("Line Color", _vfxColor * Mathf.Clamp01(p * 4));
+        _afterimageVfx.SetBool("Spawn", p > 0.1f);
     }
 
     #endregion

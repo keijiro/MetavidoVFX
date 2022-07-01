@@ -1504,6 +1504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464427124}
+  - component: {fileID: 464427126}
   - component: {fileID: 464427123}
   - component: {fileID: 464427125}
   m_Layer: 0
@@ -1538,7 +1539,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file://Test.mp4
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1578,6 +1579,18 @@ MonoBehaviour:
   _decoder: {fileID: 467884317}
   _demuxer: {fileID: 467884316}
   _asynchronous: 1
+--- !u!114 &464427126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464427122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d17f10cb20abd46a09cdb760efbe3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &467884315
 GameObject:
   m_ObjectHideFlags: 0

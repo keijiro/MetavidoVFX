@@ -40,6 +40,22 @@ MonoBehaviour:
   opacity:
     m_OverrideState: 0
     m_Value: 1
+--- !u!114 &-5050384014896884819
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b163f423bb0334a92c132847120d33, type: 3}
+  m_Name: Sharpen
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.318
 --- !u!114 &-2177917228471421334
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -135,6 +151,7 @@ MonoBehaviour:
   - {fileID: 6125502951982523781}
   - {fileID: 1089825466846170942}
   - {fileID: 7285088533611811938}
+  - {fileID: -5050384014896884819}
 --- !u!114 &1036638550668152714
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -150,7 +167,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: -0.14
+    m_Value: -0.2
   xMultiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -178,10 +195,10 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0.5
   contrast:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 20
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -190,7 +207,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 29
+    m_Value: 30
 --- !u!114 &4053294378131825345
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -370,7 +387,7 @@ MonoBehaviour:
     m_Value: 2
   opacity:
     m_OverrideState: 1
-    m_Value: 0.195
+    m_Value: 0.22
   color:
     m_OverrideState: 0
     m_Value: {r: 1, g: 0, b: 0, a: 1}

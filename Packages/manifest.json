@@ -9,5 +9,7 @@
     }
   ],
   "dependencies": {
+    "com.unity.render-pipelines.universal": "17.0.3",
+    "com.unity.modules.video": "1.0.0"
   }
 }

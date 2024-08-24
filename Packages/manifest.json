@@ -10,6 +10,7 @@
   ],
   "dependencies": {
     "com.unity.render-pipelines.universal": "17.0.3",
+    "jp.keijiro.vfxgraphassets": "3.0.1",
     "com.unity.modules.video": "1.0.0"
   }
 }

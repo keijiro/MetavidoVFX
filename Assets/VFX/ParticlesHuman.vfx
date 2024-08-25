@@ -181,7 +181,7 @@ MonoBehaviour:
     x: 1246
     y: 209
     width: 895
-    height: 2313
+    height: 2314
 --- !u!114 &114350483966674978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,7 +1136,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 60000
+      m_SerializableObject: 100000
     m_Space: -1
   m_Property:
     name: Rate
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   - {fileID: 114350483966675476}
   - {fileID: 114350483966675540}
   dataType: 0
-  capacity: 100000
+  capacity: 65536
   stripCapacity: 1
   particlePerStripCount: 128
   needsComputeBounds: 0
@@ -2720,7 +2720,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.7
+      m_SerializableObject: 0.8
     m_Space: -1
   m_Property:
     name: _Contrast
@@ -3450,7 +3450,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 4
+      m_SerializableObject: 1
     m_Space: -1
   m_Property:
     name: Intensity
@@ -3718,7 +3718,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":174.48806762695313,"g":109.00250244140625,"b":68.05034637451172,"a":1.0},"time":0.02558938041329384},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.35649654269218447},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":19.468570709228517,"g":12.161994934082032,"b":7.592742919921875,"a":1.0},"time":0.027420463040471078},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.2541084885597229},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
     m_Space: -1
   m_Property:
     name: Color
@@ -3776,7 +3776,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 1427, y: 1140}
+  m_UIPosition: {x: 1478, y: 1210}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -4010,7 +4010,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.25
+      m_SerializableObject: 0.03125
     m_Space: -1
   m_Property:
     name: Frequency
@@ -4384,7 +4384,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.1
+      m_SerializableObject: 0.0125
     m_Space: -1
   m_Property:
     name: Flash Duration
@@ -5011,7 +5011,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.025
+      m_SerializableObject: 0.015
     m_Space: -1
   m_Property:
     name: _Size

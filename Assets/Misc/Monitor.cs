@@ -10,6 +10,8 @@ public sealed class Monitor : MonoBehaviour
 
     VisualElement RootUI => GetComponent<UIDocument>().rootVisualElement;
 
+    RenderTexture _frame;
+
     string GetMetadataString()
     {
         var data = Decoder.Metadata;
@@ -21,22 +23,19 @@ public sealed class Monitor : MonoBehaviour
                $"Range:    {data.DepthRange}";
     }
 
-    async Awaitable<Background> GetSourceImage()
+    void Start()
     {
-        while (true)
-        {
-            var rt = Source.texture as RenderTexture;
-            if (rt != null) return Background.FromRenderTexture(rt);
-            await Awaitable.NextFrameAsync();
-        }
+        _frame = RenderTexture.GetTemporary(1920, 1080);
+        RootUI.Q<Label>("url-label").text = "Source: " + Source.url;
+        RootUI.Q("video-view").style.backgroundImage = Background.FromRenderTexture(_frame);
     }
 
-    async void Start()
-    {
-        RootUI.Q<Label>("url-label").text = "Source: " + Source.url;
-        RootUI.Q("video-view").style.backgroundImage = await GetSourceImage();
-    }
+    void OnDestroy()
+      => RenderTexture.ReleaseTemporary(_frame);
 
     void Update()
-      => RootUI.Q<Label>("metadata-label").text = GetMetadataString();
+    {
+       RootUI.Q<Label>("metadata-label").text = GetMetadataString();
+       if (Source.texture != null) Graphics.Blit(Source.texture, _frame);
+    }
 }

@@ -142,7 +142,7 @@
       }
     },
     "jp.keijiro.metavido": {
-      "version": "5.0.0",
+      "version": "5.0.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -154,7 +154,7 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.visualeffectgraph": "17.0.0",
-        "jp.keijiro.metavido": "5.0.0"
+        "jp.keijiro.metavido": "5.0.1"
       }
     },
     "jp.keijiro.noiseshader": {

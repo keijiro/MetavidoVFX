@@ -2,7 +2,7 @@
     "author": "Keijiro Takahashi",
     "dependencies": {
         "com.unity.visualeffectgraph": "17.0.0",
-        "jp.keijiro.metavido": "5.0.0"
+        "jp.keijiro.metavido": "5.0.1"
     },
     "description": "VFX Graph extensions for Metavido",
     "displayName": "Metavido VFX",

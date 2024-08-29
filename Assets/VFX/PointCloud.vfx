@@ -4341,7 +4341,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.01
+      m_SerializableObject: 0.015
     m_Space: -1
   m_Property:
     name: _Size
@@ -4440,7 +4440,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.0659487321972847,"y":0.24528300762176515,"z":0.18220266699790955}'
+      m_SerializableObject: '{"x":0.10955557227134705,"y":0.4059999883174896,"z":0.29644444584846499}'
     m_Space: -1
   m_Property:
     name: _Color

@@ -10,5 +10,10 @@
             <engine:Label text="Metadata&#10;1: (0.00, 0.00, 0.00)&#10;2: (0.00, 0.00, 0.00)&#10;3: (0.00, 0.00, 0.00)" name="metadata-label" />
             <engine:VisualElement name="spacer" style="flex-grow: 1;" />
         </engine:VisualElement>
+        <engine:Toggle label="Floating Camera" name="camera-toggle" data-source-type="CameraSwitcher, Assembly-CSharp">
+            <Bindings>
+                <engine:DataBinding property="value" data-source-path="ThirdPerson" binding-mode="TwoWay" />
+            </Bindings>
+        </engine:Toggle>
     </engine:VisualElement>
 </engine:UXML>

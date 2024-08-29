@@ -20,3 +20,33 @@
 .text-row {
     flex-direction: row;
 }
+
+.unity-toggle {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.unity-toggle__label {
+    min-width: 0;
+}
+
+.unity-toggle__checkmark {
+    width: 14px;
+    height: 14px;
+    border-top-width: 0.5px;
+    border-right-width: 0.5px;
+    border-bottom-width: 0.5px;
+    border-left-width: 0.5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: rgba(140, 140, 140, 0);
+    border-left-color: rgba(255, 255, 255, 0.7);
+    border-right-color: rgba(255, 255, 255, 0.7);
+    border-top-color: rgba(255, 255, 255, 0.7);
+    border-bottom-color: rgba(255, 255, 255, 0.7);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}

@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 685881871}
   - component: {fileID: 685881870}
   m_Layer: 0
-  m_Name: Dummy Camera
+  m_Name: Camera Proxy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +589,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 41.5
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1220,7 +1220,7 @@ MonoBehaviour:
     z: 0.3
   rotationAmount:
     x: 30
-    y: 60
+    y: 75
     z: 40
   frequency: 0.05
   octaves: 1
@@ -1285,6 +1285,7 @@ GameObject:
   - component: {fileID: 1641636801}
   - component: {fileID: 1641636800}
   - component: {fileID: 1641636802}
+  - component: {fileID: 1641636803}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1340,6 +1341,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Decoder>k__BackingField: {fileID: 1158076784}
   <Source>k__BackingField: {fileID: 1158076786}
+--- !u!114 &1641636803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641636799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c76ee44405d49728360c9b30a62510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Proxy>k__BackingField: {fileID: 685881872}
+  <Follower>k__BackingField: {fileID: 1578729409}
+  <Motor>k__BackingField: {fileID: 1539841716}
+  <SwitchSpeed>k__BackingField: 0.5
+  <ThirdPerson>k__BackingField: 0
 --- !u!1 &1896919010
 GameObject:
   m_ObjectHideFlags: 0

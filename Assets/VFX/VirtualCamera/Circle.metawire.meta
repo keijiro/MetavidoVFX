@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 1890f5b5f9a209a4f84c8ca201108cc9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 4d9968eb1dfdd3941af9213d6b6766ef, type: 3}
+  _shape: 2
+  _line:
+    From: {x: 0, y: 0, z: 0}
+    To: {x: 0, y: 0, z: 1}
+    Segments: 1
+  _quad:
+    Size: {x: 1, y: 1}
+    Axis: 2
+  _circle:
+    Radius: 0.2
+    Segments: 64
+    Axis: 2
+  _box:
+    Size: {x: 1, y: 1, z: 1}
+  _readWrite: 0

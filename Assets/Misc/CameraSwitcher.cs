@@ -42,6 +42,8 @@ public sealed class CameraSwitcher : MonoBehaviour
         Motor.positionAmount = _original.pos * p;
         Motor.rotationAmount = _original.rot * p;
 
+        Camera.main.transform.localPosition =
+          Vector3.forward * -math.lerp(2, 2.4f, p);
         Camera.main.fieldOfView =
           math.lerp(Proxy.fieldOfView, _original.fov, p);
     }

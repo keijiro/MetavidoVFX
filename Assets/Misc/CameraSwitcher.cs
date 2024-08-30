@@ -1,50 +1,82 @@
 using UnityEngine;
+using UnityEngine.VFX;
 using UnityEngine.UIElements;
 using Klak.Motion;
 using Unity.Mathematics;
 using Unity.Properties;
+using System;
 
 public sealed class CameraSwitcher : MonoBehaviour
 {
-    [field:SerializeField] public Camera Proxy { get; set; }
-    [field:SerializeField] public SmoothFollow Follower { get; set; }
-    [field:SerializeField] public BrownianMotion Motor { get; set; }
-    [field:SerializeField] public float SwitchSpeed { get; set; } = 1;
+    #region Scene object references
 
-    [CreateProperty]
-    [field:SerializeField] public bool ThirdPerson { get; set; }
+    [Space]
+    [SerializeField] SmoothFollow _follower = null;
+    [SerializeField] BrownianMotion _swing = null;
+    [SerializeField] VisualEffect _vfx = null;
 
-    (float low, float high) _followerSpeeds;
-    (float3 pos, float3 rot, float fov) _original;
+    #endregion
+
+    #region Per-state configuration
+
+    [Serializable]
+    public struct Config
+    {
+        public float followerSpeed;
+        public float3 positionSwing;
+        public float3 rotationSwing;
+        public float cameraDistance;
+        public float fieldOfView;
+        public Color vfxColor;
+    }
+
+    [Space, SerializeField] Config _config1st;
+    [Space, SerializeField] Config _config3rd;
+    [Space, SerializeField] float _switchSpeed = 1;
+
+    #endregion
+
+    #region Dynamic property
+
+    [field:Space][field:SerializeField]
+    [CreateProperty] public bool ThirdPerson { get; set; }
+
+    #endregion
+
+    #region Private members
+
     float _blend = 1;
 
-    void Start()
-    {
-        _followerSpeeds = (20, Follower.positionSpeed);
-        _original.pos = Motor.positionAmount;
-        _original.rot = Motor.rotationAmount;
-        _original.fov = Camera.main.fieldOfView;
+    #endregion
 
-        GetComponent<UIDocument>().rootVisualElement.
-          Q<Toggle>("camera-toggle").dataSource = this;
-    }
+    #region MonoBehaviour implementation
+
+    void Start()
+      => GetComponent<UIDocument>().rootVisualElement.
+           Q<Toggle>("camera-toggle").dataSource = this;
 
     void Update()
     {
-        var delta = Time.deltaTime * SwitchSpeed;
-        _blend = math.saturate(_blend + delta * (ThirdPerson ? 1 : -1));
+        var delta = Time.deltaTime * _switchSpeed * (ThirdPerson ? 1 : -1);
+        _blend = math.saturate(_blend + delta);
 
         var p = math.smoothstep(0, 1, _blend);
+        ref var c1 = ref _config1st;
+        ref var c3 = ref _config3rd;
 
-        Follower.positionSpeed = Follower.rotationSpeed =
-          math.lerp(_followerSpeeds.low, _followerSpeeds.high, p);
+        _follower.positionSpeed = math.lerp(c1.followerSpeed, c3.followerSpeed, p);
+        _follower.rotationSpeed = _follower.positionSpeed;
 
-        Motor.positionAmount = _original.pos * p;
-        Motor.rotationAmount = _original.rot * p;
+        _swing.positionAmount = math.lerp(c1.positionSwing, c3.positionSwing, p);
+        _swing.rotationAmount = math.lerp(c1.rotationSwing, c3.rotationSwing, p);
 
-        Camera.main.transform.localPosition =
-          Vector3.forward * -math.lerp(2, 2.4f, p);
-        Camera.main.fieldOfView =
-          math.lerp(Proxy.fieldOfView, _original.fov, p);
+        var dist = math.lerp(c1.cameraDistance, c3.cameraDistance, p);
+        Camera.main.transform.localPosition = -Vector3.forward * dist;
+        Camera.main.fieldOfView = math.lerp(c1.fieldOfView, c3.fieldOfView, p);
+
+        var vfxColor = Color.Lerp(c1.vfxColor, c3.vfxColor, p);
+        _vfx.SetVector4("Line Color", vfxColor);
     }
+
+    #endregion
 }

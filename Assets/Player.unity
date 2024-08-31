@@ -883,6 +883,7 @@ GameObject:
   - component: {fileID: 1315941124}
   - component: {fileID: 1315941123}
   - component: {fileID: 1315941125}
+  - component: {fileID: 1315941126}
   m_Layer: 0
   m_Name: Camera Proxy
   m_TagString: Untagged
@@ -954,7 +955,25 @@ VisualEffect:
     m_Vector2f:
       m_Array: []
     m_Vector3f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: -0, y: 0, z: 0}
+        m_Name: RawCamera_angles
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0, z: 0}
+        m_Name: RawCamera_position
+        m_Overridden: 1
+      - m_Value: {x: 1, y: 1, z: 1}
+        m_Name: RawCamera_scale
+        m_Overridden: 1
+      - m_Value: {x: -0, y: 0, z: 0}
+        m_Name: Raw Camera Xform_angles
+        m_Overridden: 1
+      - m_Value: {x: 0, y: 0, z: 0}
+        m_Name: Raw Camera Xform_position
+        m_Overridden: 1
+      - m_Value: {x: 1, y: 1, z: 1}
+        m_Name: Raw Camera Xform_scale
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -1026,6 +1045,7 @@ MonoBehaviour:
   m_ExecuteInEditor: 1
   m_Bindings:
   - {fileID: 1315941123}
+  - {fileID: 1315941126}
   m_VisualEffect: {fileID: 1315941121}
 --- !u!114 &1315941125
 MonoBehaviour:
@@ -1041,8 +1061,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 685881873}
   interpolator: 2
-  positionSpeed: 10
-  rotationSpeed: 10
+  positionSpeed: 15
+  rotationSpeed: 15
+--- !u!114 &1315941126
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315941119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fdfea1f838247c40921a07afedde962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Space: 1
+  m_Property:
+    m_Name: Raw Camera Xform
+  Target: {fileID: 685881873}
 --- !u!1 &1335102728
 GameObject:
   m_ObjectHideFlags: 0

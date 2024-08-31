@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 346522152}
   - component: {fileID: 346522151}
   m_Layer: 0
-  m_Name: Particles (Human)
+  m_Name: Human Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _decoder: {fileID: 1158076784}
-  _interpolation: 1
+  _interpolation: 0
 --- !u!114 &685881871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,8 +463,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1936418208}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918701672
@@ -481,7 +480,7 @@ GameObject:
   - component: {fileID: 918701674}
   - component: {fileID: 918701673}
   m_Layer: 0
-  m_Name: Particles (Object)
+  m_Name: Object Voxels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -885,7 +884,7 @@ GameObject:
   - component: {fileID: 1315941123}
   - component: {fileID: 1315941125}
   m_Layer: 0
-  m_Name: Virtual Camera
+  m_Name: Camera Proxy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -984,8 +983,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 1936418208}
+  m_Father: {fileID: 1896919011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1315941123
 MonoBehaviour:
@@ -1431,6 +1431,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1315941122}
   - {fileID: 346522150}
   - {fileID: 918701677}
   m_Father: {fileID: 0}
@@ -1466,7 +1467,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 685881873}
+  m_Father: {fileID: 1315941122}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!73398921 &1936418209
 VFXRenderer:
@@ -1557,6 +1558,5 @@ SceneRoots:
   - {fileID: 131925380}
   - {fileID: 1578729410}
   - {fileID: 685881873}
-  - {fileID: 1315941122}
   - {fileID: 1158076787}
   - {fileID: 1896919011}

@@ -263,14 +263,14 @@ MonoBehaviour:
       isStickyNote: 0
   stickyNoteInfos: []
   categories:
-  - name: Bibcam Data
-    collapsed: 0
+  - name: Metavido Data
+    collapsed: 1
   uiBounds:
     serializedVersion: 2
     x: 214
     y: -538
     width: 4983
-    height: 2790
+    height: 2791
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -366,7 +366,7 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Bibcam Data
+  - name: Metavido Data
     path: 
     tooltip: 
     space: -1
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_ExposedName: ColorMap
   m_Exposed: 1
   m_Order: 0
-  m_Category: Bibcam Data
+  m_Category: Metavido Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_ExposedName: DepthMap
   m_Exposed: 1
   m_Order: 1
-  m_Category: Bibcam Data
+  m_Category: Metavido Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_ExposedName: RayParams
   m_Exposed: 1
   m_Order: 2
-  m_Category: Bibcam Data
+  m_Category: Metavido Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_ExposedName: InverseView
   m_Exposed: 1
   m_Order: 3
-  m_Category: Bibcam Data
+  m_Category: Metavido Data
   m_Min:
     m_Type:
       m_SerializableType: 
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_ExposedName: DepthRange
   m_Exposed: 1
   m_Order: 4
-  m_Category: Bibcam Data
+  m_Category: Metavido Data
   m_Min:
     m_Type:
       m_SerializableType: 

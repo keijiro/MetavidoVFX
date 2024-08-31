@@ -15,7 +15,7 @@ MonoBehaviour:
   groupInfos: []
   stickyNoteInfos: []
   categories:
-  - name: Bibcam Data
+  - name: Metavido Data
     collapsed: 0
   uiBounds:
     serializedVersion: 2
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:

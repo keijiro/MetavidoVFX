@@ -13,7 +13,8 @@ public sealed class CameraSwitcher : MonoBehaviour
     [Space]
     [SerializeField] SmoothFollow _follower = null;
     [SerializeField] BrownianMotion _swing = null;
-    [SerializeField] VisualEffect _vfx = null;
+    [SerializeField] VisualEffect _proxyVfx = null;
+    [SerializeField] VisualEffect _afterimageVfx = null;
 
     #endregion
 
@@ -75,7 +76,8 @@ public sealed class CameraSwitcher : MonoBehaviour
         Camera.main.fieldOfView = math.lerp(c1.fieldOfView, c3.fieldOfView, p);
 
         var vfxColor = Color.Lerp(c1.vfxColor, c3.vfxColor, p);
-        _vfx.SetVector4("Line Color", vfxColor);
+        _proxyVfx.SetVector4("Line Color", vfxColor);
+        _afterimageVfx.SetBool("Spawn", ThirdPerson);
     }
 
     #endregion

@@ -50,3 +50,38 @@
     border-bottom-color: rgba(255, 255, 255, 0.7);
     -unity-background-image-tint-color: rgb(255, 255, 255);
 }
+
+.unity-radio-button__checkmark-background {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0.5px;
+    border-right-width: 0.5px;
+    border-bottom-width: 0.5px;
+    border-left-width: 0.5px;
+    padding-top: 2px;
+}
+
+.unity-radio-button__checkmark {
+    width: 9px;
+    height: 9px;
+    background-color: rgb(255, 255, 255);
+}
+
+.unity-radio-button-group {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.unity-radio-button {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 2px;
+}

@@ -6,13 +6,14 @@ using Unity.Mathematics;
 using Unity.Properties;
 using System;
 
-public sealed class CameraSwitcher : MonoBehaviour
+public sealed class Switcher : MonoBehaviour
 {
     #region Scene object references
 
     [Space]
     [SerializeField] SmoothFollow _follower = null;
     [SerializeField] BrownianMotion _swing = null;
+    [SerializeField] VisualEffect[] _vfxList = null;
     [SerializeField] VisualEffect _proxyVfx = null;
     [SerializeField] VisualEffect _afterimageVfx = null;
 
@@ -42,6 +43,9 @@ public sealed class CameraSwitcher : MonoBehaviour
     [field:Space][field:SerializeField]
     [CreateProperty] public bool ThirdPerson { get; set; }
 
+    [field:SerializeField]
+    [CreateProperty] public int VfxSelect { get; set; }
+
     #endregion
 
     #region Private members
@@ -54,7 +58,7 @@ public sealed class CameraSwitcher : MonoBehaviour
 
     void Start()
       => GetComponent<UIDocument>().rootVisualElement.
-           Q<Toggle>("camera-toggle").dataSource = this;
+           Q("info-box").dataSource = this;
 
     void Update()
     {
@@ -78,6 +82,9 @@ public sealed class CameraSwitcher : MonoBehaviour
         var vfxColor = Color.Lerp(c1.vfxColor, c3.vfxColor, p);
         _proxyVfx.SetVector4("Line Color", vfxColor);
         _afterimageVfx.SetBool("Spawn", ThirdPerson);
+
+        for (var i = 0; i < _vfxList.Length; i++)
+            _vfxList[i].SetBool("Spawn", VfxSelect == i);
     }
 
     #endregion

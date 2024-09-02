@@ -1367,6 +1367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _follower: {fileID: 1578729409}
   _swing: {fileID: 1539841716}
+  _vfxList:
+  - {fileID: 918701676}
+  - {fileID: 2143341413}
   _proxyVfx: {fileID: 1315941121}
   _afterimageVfx: {fileID: 1671746464}
   _config1st:
@@ -1397,6 +1400,7 @@ MonoBehaviour:
     vfxColor: {r: 0.27266517, g: 0.8584906, b: 0.8584906, a: 1}
   _switchSpeed: 0.5
   <ThirdPerson>k__BackingField: 0
+  <VfxSelect>k__BackingField: 0
 --- !u!1 &1671746459
 GameObject:
   m_ObjectHideFlags: 0

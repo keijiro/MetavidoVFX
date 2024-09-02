@@ -11,7 +11,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
-      "version": "2.4.1",
+      "version": "2.4.3",
       "depth": 2,
       "source": "registry",
       "dependencies": {

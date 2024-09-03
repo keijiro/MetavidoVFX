@@ -151,7 +151,7 @@
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.metavido": {
-      "version": "5.0.2",
+      "version": "5.0.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -163,7 +163,7 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.visualeffectgraph": "17.0.0",
-        "jp.keijiro.metavido": "5.0.2"
+        "jp.keijiro.metavido": "5.0.4"
       }
     },
     "jp.keijiro.metawire": {

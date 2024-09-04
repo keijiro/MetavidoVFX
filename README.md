@@ -1,7 +1,8 @@
 MetavidoVFX
 ===========
 
-![gif](https://github.com/user-attachments/assets/a7891959-22d0-409e-bb7a-a18440ffd80b)
+![gif](https://github.com/user-attachments/assets/124a2b96-76d0-4e2a-8761-d2cc4ee1df72)
+![gif](https://github.com/user-attachments/assets/078d9368-25ff-4fa8-99ed-0dbfadfc02b9)
 
 **MetavidoVFX** is an extension package for [Metavido] to add VFX Graph support.
 
@@ -11,3 +12,9 @@ MetavidoVFX
 
 - Unity 6
 - VFX Graph with URP/HDRP
+
+## Web Browser Demo
+
+https://www.keijiro.tokyo/WebGPU-Test/MetavidoVFX/
+
+(Requires WebGPU-compatible browsers)

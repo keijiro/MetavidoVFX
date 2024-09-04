@@ -11,6 +11,6 @@ jobs:
       with:
         registry-url: 'https://registry.npmjs.org'
     - run: npm publish
-      working-directory: Packages/jp.keijiro.bibcam.vfxgraph
+      working-directory: Packages/jp.keijiro.metavido.vfxgraph
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

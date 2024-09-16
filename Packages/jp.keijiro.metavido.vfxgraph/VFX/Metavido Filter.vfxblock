@@ -1061,7 +1061,7 @@ MonoBehaviour:
   - {fileID: 202}
   m_OperatorName: Custom HLSL
   m_HLSLCode: "bool MetavidoSegmentation(float Alpha, bool Object, bool Human)\n{\n 
-    bool isHuman = Alpha > 0.9;\n  return isHuman ? Human : Object;\n}"
+    bool isHuman = Alpha > 0.9999;\n  return isHuman ? Human : Object;\n}"
   m_ShaderFile: {fileID: 0}
   m_AvailableFunctions:
     selection: MetavidoSegmentation

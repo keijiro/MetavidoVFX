@@ -9,10 +9,11 @@
     }
   ],
   "dependencies": {
-    "com.unity.render-pipelines.universal": "17.0.3",
+    "com.unity.render-pipelines.universal": "17.0.4",
     "jp.keijiro.klak.motion": "1.1.0",
+    "jp.keijiro.klutter-tools": "2.1.0",
     "jp.keijiro.metawire": "2.1.1",
-    "jp.keijiro.vfxgraphassets": "3.3.0",
+    "jp.keijiro.vfxgraphassets": "3.9.1",
     "com.unity.modules.uielements": "1.0.0",
     "com.unity.modules.video": "1.0.0"
   }

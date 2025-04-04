@@ -1002,6 +1002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b16f0dd17834586adb69384ab5f16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defaultSourceURL: https://huggingface.co/keijiro-tk/metavido-data/resolve/main/TaiwanStreet1-H264.mp4
+  _testSourceFilePath: Test.mp4
   _videoPlayer: {fileID: 1158076786}
   _optionalVfxList:
   - {fileID: 1671746459}
@@ -1209,7 +1211,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://huggingface.co/keijiro-tk/metavido-data/resolve/main/TaiwanStreet1-H264.mp4
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1

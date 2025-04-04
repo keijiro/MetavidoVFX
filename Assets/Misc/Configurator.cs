@@ -4,9 +4,10 @@ using UnityEngine.Rendering.Universal;
 
 public sealed class Configurator : MonoBehaviour
 {
+    [SerializeField] string _defaultSourceURL = null;
+    [SerializeField] string _testSourceFilePath = null;
     [SerializeField] VideoPlayer _videoPlayer = null;
     [SerializeField] GameObject[] _optionalVfxList = null;
-    [SerializeField] string _testSource = "Test.mp4";
 
     void ApplyLiteSettings()
     {
@@ -26,8 +27,11 @@ public sealed class Configurator : MonoBehaviour
         }
 
 #if UNITY_EDITOR
-        if (System.IO.File.Exists(_testSource))
-            _videoPlayer.url = "file://" + _testSource;
+        if (System.IO.File.Exists(_testSourceFilePath))
+            _videoPlayer.url = "file://" + _testSourceFilePath;
 #endif
+
+        if (string.IsNullOrEmpty(_videoPlayer.url))
+            _videoPlayer.url = _defaultSourceURL;
     }
 }

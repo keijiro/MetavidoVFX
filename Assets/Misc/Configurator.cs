@@ -2,9 +2,11 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.Rendering.Universal;
 
-public sealed class ArgsParser : MonoBehaviour
+public sealed class Configurator : MonoBehaviour
 {
+    [SerializeField] VideoPlayer _videoPlayer = null;
     [SerializeField] GameObject[] _optionalVfxList = null;
+    [SerializeField] string _testSource = "Test.mp4";
 
     void ApplyLiteSettings()
     {
@@ -20,7 +22,12 @@ public sealed class ArgsParser : MonoBehaviour
             if (args[i] == "--lite")
                 ApplyLiteSettings();
             if (i < args.Length - 1 && args[i] == "--sourceURL")
-                GetComponent<VideoPlayer>().url = args[++i];
+                _videoPlayer.url = args[++i];
         }
+
+#if UNITY_EDITOR
+        if (System.IO.File.Exists(_testSource))
+            _videoPlayer.url = "file://" + _testSource;
+#endif
     }
 }

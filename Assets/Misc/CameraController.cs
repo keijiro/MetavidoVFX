@@ -47,8 +47,7 @@ public class CameraControlDragger : PointerManipulator
 
     void OnPointerDown(PointerDownEvent e)
     {
-        if (IsActive)
-        {
+        if (IsActive) {
             e.StopImmediatePropagation();
             return;
         }
@@ -71,11 +70,11 @@ public class CameraControlDragger : PointerManipulator
         var delta = (pos - _prev) / _height;
         _prev = pos;
 
-        var rot = (float3)_xform.eulerAngles;
-        rot.x = (rot.x + 180) % 360 - 180;
-        rot.x = math.clamp(rot.x - delta.y * 90, -80, 80);
-        rot.y += delta.x * 90;
-        _xform.eulerAngles = rot;
+        var rot = (float3)_xform.localEulerAngles;
+        var limit = math.float2(40, 60);
+        rot.xy = (rot.xy + 180) % 360 - 180;
+        rot.xy = math.clamp(rot.xy + delta.yx * 90, -limit, limit);
+        _xform.localEulerAngles = rot;
 
         e.StopPropagation();
     }

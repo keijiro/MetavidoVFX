@@ -7,85 +7,60 @@ public sealed class CameraController : MonoBehaviour
     [SerializeField] UIDocument _ui = null;
     [SerializeField] Transform _pivot = null;
 
+    VisualElement _area;
+    (int id, float2 prev) _drag = (-1, 0);
+
+    bool IsDragActive => _drag.id >= 0;
+
     void Start()
     {
-        var area = _ui.rootVisualElement.Q("drag-area");
-        area.AddManipulator(new CameraControlDragger(_pivot));
-    }
-}
-
-public class CameraControlDragger : PointerManipulator
-{
-    Transform _xform;
-    int _id;
-    float2 _prev;
-    float _height;
-
-    bool IsActive => _id >= 0;
-
-    public CameraControlDragger(Transform xform)
-    {
-        _xform = xform;
-        _id = -1;
-        activators.Add
-          (new ManipulatorActivationFilter{button = MouseButton.LeftMouse});
-    }
-
-    protected override void RegisterCallbacksOnTarget()
-    {
-        target.RegisterCallback<PointerDownEvent>(OnPointerDown);
-        target.RegisterCallback<PointerMoveEvent>(OnPointerMove);
-        target.RegisterCallback<PointerUpEvent>(OnPointerUp);
-    }
-
-    protected override void UnregisterCallbacksFromTarget()
-    {
-        target.UnregisterCallback<PointerDownEvent>(OnPointerDown);
-        target.UnregisterCallback<PointerMoveEvent>(OnPointerMove);
-        target.UnregisterCallback<PointerUpEvent>(OnPointerUp);
+        _area = _ui.rootVisualElement.Q("drag-area");
+        _area.RegisterCallback<PointerDownEvent>(OnPointerDown);
+        _area.RegisterCallback<PointerMoveEvent>(OnPointerMove);
+        _area.RegisterCallback<PointerUpEvent>(OnPointerUp);
     }
 
     void OnPointerDown(PointerDownEvent e)
     {
-        if (IsActive) {
+        if (IsDragActive)
+        {
             e.StopImmediatePropagation();
             return;
         }
 
-        if (CanStartManipulation(e))
-        {
-            var pos = math.float3(e.localPosition).xy;
-            (_id, _prev) = (e.pointerId, pos);
-            _height = target.resolvedStyle.height;
-            target.CapturePointer(_id);
-            e.StopPropagation();
-        }
+        _drag = (e.pointerId, math.float3(e.localPosition).xy);
+        _area.CapturePointer(_drag.id);
+        e.StopPropagation();
     }
 
     void OnPointerMove(PointerMoveEvent e)
     {
-        if (!IsActive || !target.HasPointerCapture(_id)) return;
+        if (!IsDragActive) return;
+        if (!_area.HasPointerCapture(_drag.id)) return;
+
+        var height = _area.resolvedStyle.height;
 
         var pos = math.float3(e.localPosition).xy;
-        var delta = (pos - _prev) / _height;
-        _prev = pos;
+        var delta = (pos - _drag.prev) / height;
+        _drag.prev = pos;
 
-        var rot = (float3)_xform.localEulerAngles;
+        var rot = (float3)_pivot.localEulerAngles;
         var limit = math.float2(40, 60);
         rot.xy = (rot.xy + 180) % 360 - 180;
         rot.xy = math.clamp(rot.xy + delta.yx * 90, -limit, limit);
-        _xform.localEulerAngles = rot;
+        _pivot.localEulerAngles = rot;
 
         e.StopPropagation();
     }
 
     void OnPointerUp(PointerUpEvent e)
     {
-        if (!IsActive || !target.HasPointerCapture(_id)) return;
-        if (!CanStopManipulation(e)) return;
+        if (!IsDragActive) return;
+        if (!_area.HasPointerCapture(_drag.id)) return;
 
-        _id = -1;
-        target.ReleaseMouse();
+        _drag.id = -1;
+        _area.ReleaseMouse();
+
         e.StopPropagation();
     }
 }

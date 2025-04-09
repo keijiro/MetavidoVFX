@@ -4,63 +4,64 @@ using Unity.Mathematics;
 
 public sealed class CameraController : MonoBehaviour
 {
+    #region Scene object references
+
     [SerializeField] UIDocument _ui = null;
-    [SerializeField] Transform _pivot = null;
+    [SerializeField] Camera _camera = null;
+    [SerializeField] Transform _pivotNode = null;
+    [SerializeField] Transform _distanceNode = null;
 
-    VisualElement _area;
-    (int id, float2 prev) _drag = (-1, 0);
+    #endregion
 
-    bool IsDragActive => _drag.id >= 0;
+    #region Camera controlling parameters
+
+    [field:SerializeField] public float AngleSpeed = 90;
+    [field:SerializeField] public float PitchLimit = 60;
+    [field:SerializeField] public float DistanceSpeed = 4;
+    [field:SerializeField] public float2 DistanceLimit = math.float2(3, 6);
+    [field:SerializeField] public float2 FovRange = math.float2(20, 45);
+
+    #endregion
+
+    #region TouchDragManipulator callbacks
+
+    void OnDragging(float2 delta)
+    {
+        var r = (float3)_pivotNode.localEulerAngles;
+        r.x = (r.x + 180) % 360 - 180; // (0, 360) => (-180, 180)
+        r.xy += delta.yx * AngleSpeed;
+        r.x = math.clamp(r.x, -PitchLimit, PitchLimit);
+        _pivotNode.localEulerAngles = r;
+    }
+
+    void OnScrolling(float delta)
+    {
+        var dist = _distanceNode.localPosition.z;
+        dist += DistanceSpeed * delta;
+        dist = math.clamp(dist, -DistanceLimit.y, -DistanceLimit.x);
+        _distanceNode.localPosition = new float3(0, 0, dist);
+    }
+
+    #endregion
+
+    #region MonoBehaviour implementation
 
     void Start()
     {
-        _area = _ui.rootVisualElement.Q("drag-area");
-        _area.RegisterCallback<PointerDownEvent>(OnPointerDown);
-        _area.RegisterCallback<PointerMoveEvent>(OnPointerMove);
-        _area.RegisterCallback<PointerUpEvent>(OnPointerUp);
+        var drag = new TouchDragManipulator();
+        drag.OnDragging += OnDragging;
+        drag.OnScrolling += OnScrolling;
+
+        var area = _ui.rootVisualElement.Q("drag-area");
+        area.AddManipulator(drag);
     }
 
-    void OnPointerDown(PointerDownEvent e)
+    void Update()
     {
-        if (IsDragActive)
-        {
-            e.StopImmediatePropagation();
-            return;
-        }
-
-        _drag = (e.pointerId, math.float3(e.localPosition).xy);
-        _area.CapturePointer(_drag.id);
-        e.StopPropagation();
+        var dist = -_distanceNode.localPosition.z;
+        var ndist = (dist - DistanceLimit.x) / (DistanceLimit.y - DistanceLimit.x);
+        _camera.fieldOfView = math.lerp(FovRange.x, FovRange.y, ndist);
     }
 
-    void OnPointerMove(PointerMoveEvent e)
-    {
-        if (!IsDragActive) return;
-        if (!_area.HasPointerCapture(_drag.id)) return;
-
-        var height = _area.resolvedStyle.height;
-
-        var pos = math.float3(e.localPosition).xy;
-        var delta = (pos - _drag.prev) / height;
-        _drag.prev = pos;
-
-        var rot = (float3)_pivot.localEulerAngles;
-        var limit = math.float2(40, 60);
-        rot.xy = (rot.xy + 180) % 360 - 180;
-        rot.xy = math.clamp(rot.xy + delta.yx * 90, -limit, limit);
-        _pivot.localEulerAngles = rot;
-
-        e.StopPropagation();
-    }
-
-    void OnPointerUp(PointerUpEvent e)
-    {
-        if (!IsDragActive) return;
-        if (!_area.HasPointerCapture(_drag.id)) return;
-
-        _drag.id = -1;
-        _area.ReleaseMouse();
-
-        e.StopPropagation();
-    }
+    #endregion
 }

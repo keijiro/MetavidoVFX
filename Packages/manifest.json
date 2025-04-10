@@ -9,7 +9,9 @@
     }
   ],
   "dependencies": {
+    "com.unity.inputsystem": "1.14.0",
     "com.unity.render-pipelines.universal": "17.0.4",
+    "jp.keijiro.klak.math": "2.1.0",
     "jp.keijiro.klak.motion": "1.1.0",
     "jp.keijiro.klutter-tools": "2.1.0",
     "jp.keijiro.metawire": "2.1.1",

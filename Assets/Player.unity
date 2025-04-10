@@ -938,6 +938,7 @@ MonoBehaviour:
   - {fileID: 2143341413}
   _proxyVfx: {fileID: 1315941121}
   _afterimageVfx: {fileID: 1671746464}
+  <Interval>k__BackingField: 30
 --- !u!1 &1047700006
 GameObject:
   m_ObjectHideFlags: 0

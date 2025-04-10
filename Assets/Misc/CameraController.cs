@@ -16,17 +16,17 @@ public sealed class CameraController : MonoBehaviour
 
     #region Camera controlling parameters
 
-    [Space]
-    [field:SerializeField] public float RotationSpeed = 2;
-    [field:SerializeField] public float PitchLimit = 1;
-    [Space]
-    [field:SerializeField] public float ZoomSpeed = 0.5f;
-    [field:SerializeField] public float2 DistanceRange = math.float2(3, 6);
-    [Space]
-    [field:SerializeField] public float2 FovRange = math.float2(20, 30);
-    [Space]
-    [field:SerializeField] public float TweenSpeed = 5;
-    [field:SerializeField] public float DelayToReset = 3;
+    [field:Space]
+    [field:SerializeField] public float RotationSpeed { get; set; } = 2.3f;
+    [field:SerializeField] public float PitchLimit { get; set; } = 1.1f;
+    [field:Space]
+    [field:SerializeField] public float ZoomSpeed { get; set; } = 0.5f;
+    [field:SerializeField] public float2 DistanceRange { get; set; } = math.float2(2, 4);
+    [field:Space]
+    [field:SerializeField] public float2 FovRange { get; set; } = math.float2(41.5f, 55);
+    [field:Space]
+    [field:SerializeField] public float TweenSpeed { get; set; } = 5;
+    [field:SerializeField] public float DelayToReset { get; set; } = 15;
 
     #endregion
 

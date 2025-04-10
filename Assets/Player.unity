@@ -1945,17 +1945,17 @@ MonoBehaviour:
   _camera: {fileID: 1335102731}
   _pivotNode: {fileID: 1893009743}
   _slideNode: {fileID: 1907183018}
-  RotationSpeed: 2.3
-  PitchLimit: 1.1
-  ZoomSpeed: 0.5
-  DistanceRange:
+  <RotationSpeed>k__BackingField: 2.3
+  <PitchLimit>k__BackingField: 1.1
+  <ZoomSpeed>k__BackingField: 0.5
+  <DistanceRange>k__BackingField:
     x: 2
     y: 4
-  FovRange:
+  <FovRange>k__BackingField:
     x: 41.5
     y: 55
-  TweenSpeed: 5
-  DelayToReset: 15
+  <TweenSpeed>k__BackingField: 5
+  <DelayToReset>k__BackingField: 15
 --- !u!1 &1893009742
 GameObject:
   m_ObjectHideFlags: 0

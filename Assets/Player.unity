@@ -408,6 +408,7 @@ Transform:
   - {fileID: 131925380}
   - {fileID: 1158076787}
   - {fileID: 1877084595}
+  - {fileID: 1037067013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &685881869
@@ -887,6 +888,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1896919011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1037067012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037067013}
+  - component: {fileID: 1037067014}
+  m_Layer: 0
+  m_Name: VFX Switcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1037067013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037067012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 455605712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037067014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037067012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c76ee44405d49728360c9b30a62510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 1877084596}
+  _vfxList:
+  - {fileID: 918701676}
+  - {fileID: 2143341413}
+  _proxyVfx: {fileID: 1315941121}
+  _afterimageVfx: {fileID: 1671746464}
 --- !u!1 &1047700006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +1686,6 @@ GameObject:
   - component: {fileID: 1641636801}
   - component: {fileID: 1641636800}
   - component: {fileID: 1641636802}
-  - component: {fileID: 1641636803}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1691,54 +1741,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Decoder>k__BackingField: {fileID: 1158076784}
   <Source>k__BackingField: {fileID: 1158076786}
---- !u!114 &1641636803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641636799}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2c76ee44405d49728360c9b30a62510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _follower: {fileID: 0}
-  _swing: {fileID: 0}
-  _vfxList:
-  - {fileID: 918701676}
-  - {fileID: 2143341413}
-  _proxyVfx: {fileID: 1315941121}
-  _afterimageVfx: {fileID: 1671746464}
-  _config1st:
-    followerSpeed: 10
-    positionSwing:
-      x: 0
-      y: 0
-      z: 0
-    rotationSwing:
-      x: 0
-      y: 0
-      z: 0
-    cameraDistance: 2
-    fieldOfView: 41.5
-    vfxColor: {r: 0, g: 0, b: 0, a: 0}
-  _config3rd:
-    followerSpeed: 4
-    positionSwing:
-      x: 0.3
-      y: 0.3
-      z: 0.3
-    rotationSwing:
-      x: 30
-      y: 75
-      z: 40
-    cameraDistance: 2.5
-    fieldOfView: 45
-    vfxColor: {r: 0.27266517, g: 0.8584906, b: 0.8584906, a: 1}
-  _switchSpeed: 0.5
-  <ThirdPerson>k__BackingField: 0
-  <VfxSelect>k__BackingField: 0
 --- !u!1 &1671746459
 GameObject:
   m_ObjectHideFlags: 0

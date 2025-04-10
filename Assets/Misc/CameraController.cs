@@ -30,6 +30,12 @@ public sealed class CameraController : MonoBehaviour
 
     #endregion
 
+    #region Public runtime properties
+
+    public float ZoomParam => _zoom.current;
+
+    #endregion
+
     #region Private members
 
     float2 _rotation;
@@ -72,8 +78,7 @@ public sealed class CameraController : MonoBehaviour
         drag.OnDragging += OnDragging;
         drag.OnScrolling += OnScrolling;
 
-        var area = _ui.rootVisualElement.Q("drag-area");
-        area.AddManipulator(drag);
+        _ui.rootVisualElement.AddManipulator(drag);
     }
 
     void Update()

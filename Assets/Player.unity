@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b16f0dd17834586adb69384ab5f16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultSourceURL: https://huggingface.co/keijiro-tk/metavido-data/resolve/main/TaiwanStreet1-H264.mp4
+  _defaultSourceUrl: https://huggingface.co/keijiro-tk/metavido-data/resolve/main/TaiwanStreet1-H264.mp4
   _testSourceFilePath: Test.mp4
   _videoPlayer: {fileID: 1158076786}
   _optionalVfxList:

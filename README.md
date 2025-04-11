@@ -15,6 +15,6 @@ MetavidoVFX
 
 ## Web Browser Demo
 
-https://www.keijiro.tokyo/WebGPU-Test/MetavidoVFX/
+https://play.unity.com/games/f4e0ea34-bd6d-4b2d-b24d-69ffa6e88795/metavido
 
 (Requires WebGPU-compatible browsers)

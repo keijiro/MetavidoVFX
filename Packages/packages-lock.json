@@ -174,8 +174,8 @@
       "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.metavido": {
-      "version": "5.0.4",
-      "depth": 1,
+      "version": "5.1.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.com"

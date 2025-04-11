@@ -9,5 +9,8 @@
         <engine:VisualElement name="row2" class="text-row">
             <engine:Label text="Metadata&#10;1: (0.00, 0.00, 0.00)&#10;2: (0.00, 0.00, 0.00)&#10;3: (0.00, 0.00, 0.00)" name="metadata-label" />
         </engine:VisualElement>
+        <engine:VisualElement name="row3" class="text-row">
+            <engine:Label text="Drag: Rotate Camera&#10;Scroll: Zoom In/Out&#10;(Mouse wheel or two-finger swipe)" name="inst-label" />
+        </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>
